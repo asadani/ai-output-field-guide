@@ -89,3 +89,7 @@ detail page. Build, content/link checks, all 13 tests, structural accessibility
 checks and strict premium audit passed. DESIGN.md lint has zero errors and the
 three existing runtime-token advisory warnings. Existing broader verification
 limits above still apply.
+
+Live verification after the first deployment exposed a cached old stylesheet.
+The shared shell now uses a SHA-256 content version on its stylesheet URL, so
+subsequent CSS changes receive a new cache key across all generated routes.
