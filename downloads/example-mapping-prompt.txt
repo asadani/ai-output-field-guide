@@ -1,0 +1,8 @@
+Help me apply Example Mapping to the material below.
+Reader and existing knowledge: [describe]
+Task and desired outcome: [describe]
+Use these principles: Start with one bounded story.; For each rule, try concrete examples including a boundary or failure case.; Keep unanswered questions visible instead of silently choosing an outcome..
+Preserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.
+Separate supplied facts from assumptions. Ask for missing information instead of inventing it.
+Explain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.
+Material: [paste only information you are permitted to share]

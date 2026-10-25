@@ -1,0 +1,8 @@
+Help me apply Entity–relationship modeling to the material below.
+Reader and existing knowledge: [describe]
+Task and desired outcome: [describe]
+Use these principles: Identify entities and their identities.; Name relationships and specify minimum and maximum participation.; Separate a conceptual relationship from its storage implementation..
+Preserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.
+Separate supplied facts from assumptions. Ask for missing information instead of inventing it.
+Explain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.
+Material: [paste only information you are permitted to share]

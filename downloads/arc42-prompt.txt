@@ -1,0 +1,8 @@
+Help me apply arc42 to the material below.
+Reader and existing knowledge: [describe]
+Task and desired outcome: [describe]
+Use these principles: State goals, quality priorities, and constraints before explaining a solution.; Connect context, building blocks, runtime, and deployment views.; Record decisions, risks, and a shared glossary rather than hiding them behind diagrams..
+Preserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.
+Separate supplied facts from assumptions. Ask for missing information instead of inventing it.
+Explain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.
+Material: [paste only information you are permitted to share]

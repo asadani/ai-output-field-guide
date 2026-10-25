@@ -1,0 +1,8 @@
+Help me apply JSON Schema to the material below.
+Reader and existing knowledge: [describe]
+Task and desired outcome: [describe]
+Use these principles: Declare the schema dialect.; Separate required presence from the allowed type and value.; Check actual instances with a validator that supports the chosen dialect..
+Preserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.
+Separate supplied facts from assumptions. Ask for missing information instead of inventing it.
+Explain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.
+Material: [paste only information you are permitted to share]

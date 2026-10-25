@@ -1,0 +1,34 @@
+# AI Output Field Guide
+
+Original educational reference by Anuj Sadani. Educational adaptations do not establish formal compliance.
+
+- [ASD-STE100](https://tech.anujsadani.in/ai-output-field-guide/approaches/asd-ste100/): Make technical instructions easier to interpret through controlled language and consistent terms.
+- [Plain language](https://tech.anujsadani.in/ai-output-field-guide/approaches/plain-language/): Help the intended reader find, understand, and use the information they need.
+- [Diátaxis](https://tech.anujsadani.in/ai-output-field-guide/approaches/diataxis/): Choose documentation around whether someone is learning or working, and doing or understanding.
+- [Minto Pyramid Principle](https://tech.anujsadani.in/ai-output-field-guide/approaches/pyramid-principle/): Organize a business explanation around one main point supported by logically grouped reasons.
+- [DITA](https://tech.anujsadani.in/ai-output-field-guide/approaches/dita/): Author reusable documentation topics and assemble them for different publications.
+- [Concept mapping](https://tech.anujsadani.in/ai-output-field-guide/approaches/concept-maps/): Make relationships between concepts explicit with labeled connections.
+- [Worked examples](https://tech.anujsadani.in/ai-output-field-guide/approaches/worked-examples/): Study a complete solution with reasons before attempting a related problem.
+- [Self-explanation & teach-back](https://tech.anujsadani.in/ai-output-field-guide/approaches/self-explanation/): Explain a mechanism in your own words, then check the explanation against evidence.
+- [Socratic questioning](https://tech.anujsadani.in/ai-output-field-guide/approaches/socratic-questioning/): Use focused questions to examine definitions, assumptions, evidence, and consequences.
+- [Progressive disclosure](https://tech.anujsadani.in/ai-output-field-guide/approaches/progressive-disclosure/): Reveal detail when it becomes useful while keeping essential information easy to find.
+- [C4 model](https://tech.anujsadani.in/ai-output-field-guide/approaches/c4/): Explain a software architecture through a small set of consistent levels of detail.
+- [UML](https://tech.anujsadani.in/ai-output-field-guide/approaches/uml/): Choose a defined notation for structure, interactions, activities, or state changes.
+- [Entity–relationship modeling](https://tech.anujsadani.in/ai-output-field-guide/approaches/erd/): Describe entities, relationships, and cardinality before designing or interpreting data.
+- [arc42](https://tech.anujsadani.in/ai-output-field-guide/approaches/arc42/): Document architecture through a coherent set of questions about context, structure, behavior, quality, and risk.
+- [Architecture decision records](https://tech.anujsadani.in/ai-output-field-guide/approaches/adr/): Preserve why a consequential choice was made and what follows from it.
+- [EARS](https://tech.anujsadani.in/ai-output-field-guide/approaches/ears/): Give a textual requirement explicit context, trigger, and observable system response.
+- [BCP 14 requirement levels](https://tech.anujsadani.in/ai-output-field-guide/approaches/bcp14/): Distinguish mandatory requirements, recommendations, and genuine options.
+- [Gherkin](https://tech.anujsadani.in/ai-output-field-guide/approaches/gherkin/): Express a concrete behavior through starting conditions, an event, and an observable outcome.
+- [Example Mapping](https://tech.anujsadani.in/ai-output-field-guide/approaches/example-mapping/): Explore a feature by separating rules, concrete examples, unanswered questions, and scope.
+- [BPMN](https://tech.anujsadani.in/ai-output-field-guide/approaches/bpmn/): Describe a business process through activities, events, decisions, and participant boundaries.
+- [DMN & decision tables](https://tech.anujsadani.in/ai-output-field-guide/approaches/dmn/): Represent how input conditions produce an explicit decision outcome.
+- [JSON Schema](https://tech.anujsadani.in/ai-output-field-guide/approaches/json-schema/): Describe which JSON values have the structure and constraints your application expects.
+- [OpenAPI](https://tech.anujsadani.in/ai-output-field-guide/approaches/openapi/): Describe an HTTP API’s operations, inputs, responses, and security requirements.
+- [AsyncAPI](https://tech.anujsadani.in/ai-output-field-guide/approaches/asyncapi/): Describe message-driven interfaces through channels, operations, messages, and protocol details.
+- [SKOS](https://tech.anujsadani.in/ai-output-field-guide/approaches/skos/): Represent concepts, preferred terms, alternative labels, and their relationships consistently.
+- [SHACL](https://tech.anujsadani.in/ai-output-field-guide/approaches/shacl/): Check RDF graph data against explicit shapes and constraints.
+- [W3C PROV](https://tech.anujsadani.in/ai-output-field-guide/approaches/prov/): Describe the entities, activities, and agents involved in producing an artifact.
+- [Statecharts & SCXML](https://tech.anujsadani.in/ai-output-field-guide/approaches/scxml/): Describe which events can change a system’s state, including states where an action is no longer valid.
+- [TLA+](https://tech.anujsadani.in/ai-output-field-guide/approaches/tla-plus/): Model possible system behaviors and state the properties those behaviors should satisfy.
+- [Alloy](https://tech.anujsadani.in/ai-output-field-guide/approaches/alloy/): Explore structures and counterexamples described by relational constraints.

@@ -1,0 +1,481 @@
+{
+  "tasks": [
+    {
+      "slug": "understand",
+      "title": "Understand a complicated subject",
+      "summary": "Build a mental model you can explain and test.",
+      "primary": "worked-examples",
+      "companions": [
+        "concept-maps",
+        "self-explanation"
+      ],
+      "rationale": "When a mechanism is unfamiliar, a complete annotated example gives you something concrete to inspect. A concept map adds relationships; teach-back checks the explanation you formed.",
+      "when": "You are learning a mechanism and can follow a small example.",
+      "avoid": "If you only need a definition or a known parameter, go straight to reference material. A long lesson may be unnecessary.",
+      "steps": [
+        "State what you already know and the question you want answered.",
+        "Study one example with reasons for each step.",
+        "Predict a changed case before looking at the answer.",
+        "Explain why the prediction follows, including its assumptions."
+      ],
+      "case": "binary-search"
+    },
+    {
+      "slug": "explain",
+      "title": "Explain something to another person",
+      "summary": "Choose the structure and depth your reader needs.",
+      "primary": "diataxis",
+      "companions": [
+        "plain-language",
+        "progressive-disclosure"
+      ],
+      "rationale": "First decide whether the person needs to learn, act, look something up, or understand why. Then choose vocabulary and detail for that reader rather than merely shortening the text.",
+      "when": "You know the subject but need to communicate it to someone with different prior knowledge.",
+      "avoid": "If you need a decision rather than an explanation, use the decision guide. If the reader needs only a precise value, lead with the reference answer.",
+      "steps": [
+        "Name the audience and their existing knowledge.",
+        "Choose a documentation purpose.",
+        "Show one concrete example and preserve necessary terminology.",
+        "Ask the reader a small question to check the intended understanding."
+      ],
+      "case": "binary-search"
+    },
+    {
+      "slug": "instruct",
+      "title": "Write instructions someone can follow",
+      "summary": "Make prerequisites, conditions, actions, and checks visible.",
+      "primary": "asd-ste100",
+      "companions": [
+        "plain-language",
+        "ears"
+      ],
+      "rationale": "For a bounded procedure, separate actions and consistent terms make steps easier to follow. Plain-language structure supports findability; EARS helps specify the behavior the procedure is meant to achieve.",
+      "when": "There is a concrete action sequence and an observable outcome.",
+      "avoid": "A contested policy or architectural tradeoff needs reasoning and alternatives, not a flattened list of commands.",
+      "steps": [
+        "Record prerequisites, warnings, and stop conditions.",
+        "Write one main action per step.",
+        "Keep exact names, quantities, and exceptions.",
+        "Add an observable check and what to do if it fails."
+      ],
+      "case": "workshop"
+    },
+    {
+      "slug": "describe",
+      "title": "Describe a system or process",
+      "summary": "Show boundaries, relationships, order, and state without mixing them.",
+      "primary": "c4",
+      "companions": [
+        "uml",
+        "bpmn"
+      ],
+      "rationale": "Start with the system boundary and its neighbors when the question is what exists. Use a sequence view for who calls whom over time, or BPMN when organizational handoffs and workflow events are the central question.",
+      "when": "You need a software-system overview, with optional deeper behavior views.",
+      "avoid": "For a non-software organizational workflow, start with BPMN instead. C4 alone does not establish runtime order or business policy.",
+      "steps": [
+        "Write the exact question the view should answer.",
+        "Choose the boundary and level of detail.",
+        "Label responsibilities and relationships.",
+        "Add a separate behavior view only when the question needs it."
+      ],
+      "case": "document-sharing"
+    },
+    {
+      "slug": "decide",
+      "title": "Compare options and record a decision",
+      "summary": "Connect a choice to reasons, evidence, and revisit conditions.",
+      "primary": "adr",
+      "companions": [
+        "pyramid-principle",
+        "dmn"
+      ],
+      "rationale": "A decision record preserves the context, chosen option, and consequences. A pyramid can organize the explanation. For recurring decisions driven by conditions, a decision table may be more useful than a one-off record.",
+      "when": "You are selecting an approach and need the reason to survive beyond the conversation.",
+      "avoid": "Use DMN for repeatable rule evaluation; use a decision record for the choice of those rules and their rationale.",
+      "steps": [
+        "State the decision and the constraints.",
+        "Compare real alternatives against the same criteria.",
+        "Separate observed evidence from assumptions.",
+        "Record consequences and when the decision should be revisited."
+      ],
+      "case": "workshop"
+    },
+    {
+      "slug": "specify",
+      "title": "Specify requirements and rules",
+      "summary": "Turn intentions into explicit behavior and inspectable cases.",
+      "primary": "ears",
+      "companions": [
+        "example-mapping",
+        "gherkin"
+      ],
+      "rationale": "A requirement should expose its trigger, conditions, and response. Example Mapping reveals questions through concrete cases. Gherkin can preserve agreed examples for discussion and, with implementation, executable tests.",
+      "when": "A team needs to agree what should happen before building or changing a feature.",
+      "avoid": "Precise wording does not settle an unresolved policy. Record unknown cases instead of assigning invented outcomes.",
+      "steps": [
+        "Identify actors, triggers, conditions, and observable responses.",
+        "Try normal, boundary, and failure cases.",
+        "Resolve conflicts or leave the decision explicitly open.",
+        "Retain agreed scenarios beside the requirement."
+      ],
+      "case": "document-sharing"
+    }
+  ],
+  "cases": [
+    {
+      "slug": "workshop",
+      "title": "One workshop, three useful views",
+      "summary": "See how prose, a process view, and a decision table answer different questions.",
+      "facts": [
+        "The workshop has 12 places.",
+        "A registration is confirmed only if a place is available and an email address is supplied.",
+        "A duplicate submission for an existing confirmed registration does not consume another place.",
+        "When no place is available, a valid new registration goes to the waitlist."
+      ],
+      "question": "A confirmed participant submits the same registration again while the workshop is full. What should happen?",
+      "answer": "Keep the existing confirmation without consuming another place. Duplicate handling is checked before the capacity rule.",
+      "views": [
+        {
+          "id": "prose",
+          "label": "Instructions",
+          "title": "Follow the registration steps",
+          "text": "First check whether this person already has a confirmed registration. If so, return the existing confirmation. Otherwise require an email address, then check remaining places. Confirm when a place is available; add to the waitlist when the workshop is full.",
+          "shows": "Action order and conditions.",
+          "hides": "A paragraph makes overlapping cases harder to compare than a table.",
+          "code": "1. Check for an existing confirmation.\n2. If it exists, return it without reserving a place.\n3. For a new registration, require an email address.\n4. If a place is available, confirm and reserve one place.\n5. Otherwise, add the new registration to the waitlist."
+        },
+        {
+          "id": "flow",
+          "label": "Process view",
+          "title": "Inspect the decision order",
+          "text": "The duplicate check precedes validation and allocation for a new registration. This is an authored flow illustration, not a complete BPMN model.",
+          "shows": "The order in which questions are considered.",
+          "hides": "The flow does not define every possible validation failure or operational retry.",
+          "diagram": [
+            "Existing confirmation?",
+            "New: email supplied?",
+            "Place available?"
+          ],
+          "edges": [
+            "No: evaluate new request",
+            "Yes: evaluate capacity"
+          ]
+        },
+        {
+          "id": "table",
+          "label": "Decision table",
+          "title": "Compare the cases",
+          "text": "Read from the first row down. This teaching table uses first-match behavior. A real DMN table needs its hit policy declared explicitly.",
+          "shows": "The interaction between duplicate, email, and capacity conditions.",
+          "hides": "A table does not show the user interface or message delivery.",
+          "headers": [
+            "First matching condition",
+            "Outcome",
+            "Places consumed"
+          ],
+          "rows": [
+            [
+              "Existing confirmed registration",
+              "Return existing confirmation",
+              "0"
+            ],
+            [
+              "New registration, no email",
+              "Ask for email",
+              "0"
+            ],
+            [
+              "New, email supplied, place available",
+              "Confirm",
+              "1"
+            ],
+            [
+              "New, email supplied, no place",
+              "Waitlist",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "document-sharing",
+      "title": "One sharing rule, three questions",
+      "summary": "Separate what exists, what happens, and what the permission rule decides.",
+      "facts": [
+        "A workspace has a reader, a web application, an authorization service, and a document store.",
+        "The application asks authorization before reading a document.",
+        "A current team member may read the team document. A non-member is denied.",
+        "After membership is revoked, a new request is denied. In-flight requests and caches are outside this example."
+      ],
+      "question": "The store is shown inside the architecture boundary. Does that prove former members cannot read documents?",
+      "answer": "No. A structural boundary does not establish a permission decision. Check the rule and its enforcement path, including the stated scope exclusions.",
+      "views": [
+        {
+          "id": "structure",
+          "label": "Structure",
+          "title": "What exists and what connects?",
+          "text": "The reader uses the web application. The application depends on authorization and the document store. This compact teaching view illustrates C4-style responsibilities; it is not a full deployment model.",
+          "shows": "Participants, responsibilities, and dependencies.",
+          "hides": "Boxes do not establish call order or prove authorization enforcement.",
+          "diagram": [
+            "Reader",
+            "Web application",
+            "Authorization + store"
+          ],
+          "edges": [
+            "uses",
+            "checks, then reads"
+          ]
+        },
+        {
+          "id": "sequence",
+          "label": "Interaction",
+          "title": "What happens during a read?",
+          "text": "Each new request checks current membership. Only an allow response leads to a store read. The deny branch returns no document.",
+          "shows": "Order, participants, and the allow/deny branch.",
+          "hides": "The sequence does not explain why membership is the chosen policy.",
+          "code": "Reader → Application: read(document)\nApplication → Authorization: current_member(reader, team)?\n[allow] Application → Store: fetch(document)\n[allow] Application → Reader: document\n[deny] Application → Reader: access denied"
+        },
+        {
+          "id": "rules",
+          "label": "Rules",
+          "title": "Which outcomes are intended?",
+          "text": "This bounded decision table uses current membership. It does not model public links, folder inheritance, ownership, or concurrent revocation.",
+          "shows": "A small policy and its explicitly excluded cases.",
+          "hides": "A rule model does not prove that the deployed code follows it.",
+          "headers": [
+            "New request",
+            "Current membership",
+            "Outcome"
+          ],
+          "rows": [
+            [
+              "Team document",
+              "Member",
+              "Allow"
+            ],
+            [
+              "Team document",
+              "Non-member",
+              "Deny"
+            ],
+            [
+              "After revocation",
+              "Non-member",
+              "Deny"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "binary-search",
+      "title": "Understand binary search by changing the view",
+      "summary": "Use an example, a visual interval, and teach-back to inspect the same mechanism.",
+      "facts": [
+        "The list is sorted in ascending order: [2, 5, 8, 11, 14].",
+        "The target is 11. Positions in this example count from 1.",
+        "Compare with the middle value; retain only the region that could contain the target.",
+        "Stop at a match or when no candidates remain."
+      ],
+      "question": "Why would this elimination rule fail if the list were unsorted?",
+      "answer": "A comparison with the middle item would no longer establish which other items are too small or too large. Discarding half could remove the target.",
+      "views": [
+        {
+          "id": "worked",
+          "label": "Worked example",
+          "title": "Follow each justified step",
+          "text": "Start with all five candidates. The middle value is 8. Since 11 is greater, keep [11, 14]. Inspect 11 and report a match at position 4. Other midpoint conventions can take a different valid sequence.",
+          "shows": "The comparison that justifies each reduction.",
+          "hides": "Following one successful example does not show that you can handle an absent target.",
+          "code": "Candidates: [2, 5, 8, 11, 14]\nCompare target 11 with middle 8.\nKeep: [11, 14]\nCompare target 11 with 11.\nFound at position 4."
+        },
+        {
+          "id": "visual",
+          "label": "Visual interval",
+          "title": "Watch the candidate set shrink",
+          "text": "The labels show successive candidate regions. Values outside the retained region cannot match under the ordering assumption.",
+          "shows": "How the set of possible answers changes.",
+          "hides": "The diagram is an authored trace, not an execution engine or a performance benchmark.",
+          "diagram": [
+            "2 · 5 · 8 · 11 · 14",
+            "11 · 14",
+            "11: match"
+          ],
+          "edges": [
+            "11 > 8: keep upper region",
+            "compare with 11"
+          ]
+        },
+        {
+          "id": "teach",
+          "label": "Teach-back",
+          "title": "Explain the condition that makes it work",
+          "text": "Before opening the answer below, explain why a comparison permits discarding some values. Then try finding 10 in the same list.",
+          "shows": "Whether your explanation includes the ordering assumption.",
+          "hides": "A fluent answer can still be wrong; compare it with the actual trace.",
+          "code": "Try this:\n1. Explain why values 2, 5, and 8 can be excluded.\n2. Predict what happens when the target is 10.\n3. Check that the candidate region eventually becomes empty.\n4. Explain why this means no match exists."
+        }
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "slug": "ste-and-plain-language",
+      "title": "STE-inspired writing and plain language",
+      "a": "asd-ste100",
+      "b": "plain-language",
+      "summary": "Controlled technical expression and reader-centered communication can reinforce each other.",
+      "rows": [
+        [
+          "Primary question",
+          "Can this technical instruction be interpreted consistently?",
+          "Can the intended reader find, understand, and use the information?"
+        ],
+        [
+          "Typical scope",
+          "Technical documentation with specific language rules",
+          "Reader needs, organization, wording, and use"
+        ],
+        [
+          "Useful combination",
+          "Use stable terms and separated actions",
+          "Put those instructions in a findable, relevant document"
+        ]
+      ],
+      "exercise": "A short procedure uses perfect terminology but hides the deadline on page six. Which approach addresses the remaining problem?",
+      "answer": "Plain-language work on findability and reader needs addresses the hidden deadline. Selected STE principles can still improve the procedure itself."
+    },
+    {
+      "slug": "c4-and-uml",
+      "title": "C4 and UML",
+      "a": "c4",
+      "b": "uml",
+      "summary": "An architectural zoom model and a broader modeling language answer overlapping but different questions.",
+      "rows": [
+        [
+          "Primary job",
+          "Choose architectural abstractions and levels",
+          "Describe structure and behavior through multiple diagram types"
+        ],
+        [
+          "Useful first view",
+          "System context or container",
+          "Sequence, class, activity, or state view according to the question"
+        ],
+        [
+          "Useful combination",
+          "Show the application and its neighbors",
+          "Trace one interaction through those participants"
+        ]
+      ],
+      "exercise": "You have a good system context view but cannot see whether authorization occurs before a data read. What should you add?",
+      "answer": "Add an interaction view, such as a UML sequence diagram, using consistent participant names. More structural boxes will not establish call order."
+    },
+    {
+      "slug": "bpmn-and-sequence",
+      "title": "BPMN and sequence diagrams",
+      "a": "bpmn",
+      "b": "uml",
+      "summary": "Organizational process flow and participant interactions offer different perspectives on behavior.",
+      "rows": [
+        [
+          "Main emphasis",
+          "Activities, events, gateways, and organizational participants",
+          "Messages exchanged by participants in time order"
+        ],
+        [
+          "Good question",
+          "Who handles a cancellation, and what happens after a deadline?",
+          "Which service receives the request and what response follows?"
+        ],
+        [
+          "Boundary",
+          "A process model does not specify every API payload",
+          "A sequence does not capture every organizational workflow rule"
+        ]
+      ],
+      "exercise": "A workshop refund requires an organizer’s approval and a timeout escalation. Which view would you start with?",
+      "answer": "Start with BPMN to show the approval activity, event, and escalation across participants. Add a sequence view later if service-level messages need specification."
+    },
+    {
+      "slug": "ears-and-gherkin",
+      "title": "EARS and Gherkin",
+      "a": "ears",
+      "b": "gherkin",
+      "summary": "A general behavioral requirement and a concrete scenario can check each other.",
+      "rows": [
+        [
+          "Unit",
+          "A requirement with context, trigger, and response",
+          "A scenario with preconditions, event, and observable outcome"
+        ],
+        [
+          "Strength",
+          "State the rule consistently",
+          "Make an interpretation concrete"
+        ],
+        [
+          "Boundary",
+          "Precise grammar can still encode an incomplete rule",
+          "A handful of passing scenarios cannot cover every case"
+        ]
+      ],
+      "exercise": "“When a member loses access, deny future reads.” What scenario would test its scope?",
+      "answer": "Given membership has been revoked, when a new document read is requested, then access is denied. Explicitly decide whether in-flight requests and cached copies are covered; do not invent that scope."
+    },
+    {
+      "slug": "decision-table-and-state",
+      "title": "Decision tables and state machines",
+      "a": "dmn",
+      "b": "scxml",
+      "summary": "Conditions determine an outcome; states and events determine how a system evolves.",
+      "rows": [
+        [
+          "Question",
+          "What result follows from these inputs?",
+          "What transition follows this event in the current state?"
+        ],
+        [
+          "Useful example",
+          "Workshop eligibility from email and available places",
+          "A registration moves from waitlisted to offered to confirmed"
+        ],
+        [
+          "Useful combination",
+          "A table decides whether an offer is allowed",
+          "The state machine controls the lifecycle after the decision"
+        ]
+      ],
+      "exercise": "You know who is eligible, but not whether an expired offer can be accepted. What is missing?",
+      "answer": "The lifecycle model needs an expired state or equivalent transition rule. Eligibility alone does not say which events remain valid over time."
+    },
+    {
+      "slug": "json-schema-and-openapi",
+      "title": "JSON Schema and OpenAPI",
+      "a": "json-schema",
+      "b": "openapi",
+      "summary": "Payload constraints are one part of an HTTP interface contract.",
+      "rows": [
+        [
+          "Primary scope",
+          "Structure and constraints of JSON instances",
+          "HTTP paths, operations, parameters, requests, responses, and security descriptions"
+        ],
+        [
+          "Useful check",
+          "Does this object satisfy the supplied schema?",
+          "Does the described operation include the intended request and error responses?"
+        ],
+        [
+          "Boundary",
+          "A valid payload need not be true or authorized",
+          "A complete description does not prove the running server conforms"
+        ]
+      ],
+      "exercise": "A registration object validates, but you do not know which endpoint accepts it or what a full workshop returns. What should you add?",
+      "answer": "Define the HTTP operation and response cases in OpenAPI, reusing the payload schema where appropriate. Test the implementation separately."
+    }
+  ]
+}

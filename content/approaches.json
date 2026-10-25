@@ -1,0 +1,3238 @@
+[
+  {
+    "slug": "asd-ste100",
+    "title": "ASD-STE100",
+    "family": "Language & documentation",
+    "type": "Standard",
+    "level": "Introductory",
+    "summary": "Make technical instructions easier to interpret through controlled language and consistent terms.",
+    "history": [
+      "STE grew from aerospace maintenance documentation for readers working in a second language. The first AECMA guide appeared in 1986; the ASD maintenance group now maintains it.",
+      "Issue 9 was published in 2025. Its writing rules and dictionary work together with provisions for technical vocabulary. This guide teaches selected principles, not the full standard."
+    ],
+    "purpose": "Reduce avoidable interpretation in instructions where a reader must identify the object, condition, action, and expected result.",
+    "principles": [
+      "Give each procedural step one main action.",
+      "Use the same term for the same object; preserve technical names.",
+      "Split a long instruction without deleting its conditions or warnings."
+    ],
+    "when": [
+      "Setup instructions, maintenance procedures, and operational handoffs.",
+      "A multilingual team needs consistent technical terminology."
+    ],
+    "benefits": [
+      "Separate actions are easier to follow and check off.",
+      "Consistent naming reduces guesses about whether two labels refer to the same thing."
+    ],
+    "limits": [
+      "A short sentence can still be factually wrong; language control does not validate the action.",
+      "An informal request for an STE-inspired style is not a measured compliance level. Exact compliance requires the actual standard and qualified review."
+    ],
+    "example": {
+      "before": "Before starting the workshop, check the projector and connect the laptop, unless the cable is damaged, in which case notify the organizer.",
+      "after": "1. Examine the projector cable for damage.\n2. If the cable is damaged, notify the organizer. Do not use the cable.\n3. If the cable is not damaged, connect the laptop to the projector.\n4. Check that the projector displays the laptop screen.",
+      "notes": [
+        "The condition is visible before the risky action.",
+        "The cable has one stable name.",
+        "The final check describes an observable outcome; this is an original teaching example, not certified STE."
+      ]
+    },
+    "template": "# Procedure\nPurpose:\nPrerequisites:\nTechnical terms:\nWarnings and stop conditions:\n\n1. [Condition, if any:] [One action.]\n2. [One action.]\n\nExpected result:\nIf the check fails:\n",
+    "checklist": [
+      "Did every warning and exception survive?",
+      "Can a reader identify who acts and on what?",
+      "Are exact names and quantities unchanged?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "A rewrite removes “unless the cable is damaged” to meet a sentence limit. What should happen?",
+        "options": [
+          "Accept the shorter version",
+          "Split the sentence and retain the exception",
+          "Replace the cable name with a shorter synonym"
+        ],
+        "answer": 1,
+        "explanation": "The exception changes whether the action is safe to perform. Split the instruction instead of removing its condition.",
+        "hint": "Readability and information preservation must both hold.",
+        "id": "asd-ste100-1"
+      },
+      {
+        "kind": "choice",
+        "question": "Which change most directly reduces terminology ambiguity?",
+        "options": [
+          "Alternate between attendee and participant",
+          "Remove all technical nouns",
+          "Use participant consistently for the same role"
+        ],
+        "answer": 2,
+        "explanation": "A stable term helps the reader recognize the same entity across steps. Technical vocabulary can remain when it is defined and used consistently.",
+        "hint": "Focus on whether names denote one thing.",
+        "id": "asd-ste100-2"
+      },
+      {
+        "kind": "open",
+        "question": "Rewrite: “Check the backup and delete the old copy if the new copy opens correctly.”",
+        "explanation": "Check that the new backup opens correctly. If it opens correctly, delete the old copy. If it does not open, retain the old copy and investigate.",
+        "rubric": [
+          "Retain the success condition",
+          "Separate checking from deletion",
+          "Keep the old copy when verification fails"
+        ],
+        "hint": "Which action must wait for evidence?",
+        "id": "asd-ste100-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "ASD-STE100 — primary reference",
+        "url": "https://www.asd-ste100.org/about_STE.html"
+      }
+    ],
+    "related": [
+      "plain-language",
+      "ears",
+      "diataxis"
+    ],
+    "tasks": [
+      "instruct",
+      "explain"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "STE",
+      "Simplified Technical English"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply ASD-STE100 to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Give each procedural step one main action.; Use the same term for the same object; preserve technical names.; Split a long instruction without deleting its conditions or warnings..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "plain-language",
+    "title": "Plain language",
+    "family": "Language & documentation",
+    "type": "Standard-informed practice",
+    "level": "Introductory",
+    "summary": "Help the intended reader find, understand, and use the information they need.",
+    "history": [
+      "Plain-language practice spans public communication, administration, and technical writing. ISO 24495-1:2023 established international governing principles and guidelines.",
+      "The standard addresses primarily textual information and applies across written languages. This page uses its public description and original examples; it does not reproduce the standard."
+    ],
+    "purpose": "Make a document serve its reader’s real situation, including navigation, relevance, vocabulary, and action.",
+    "principles": [
+      "Identify the reader and the question they need answered.",
+      "Put necessary information where the reader expects to find it.",
+      "Use familiar wording while explaining indispensable technical terms."
+    ],
+    "when": [
+      "Public notices, event instructions, guidance pages, and explanations for a new audience.",
+      "A document is accurate but readers cannot find the action or deadline."
+    ],
+    "benefits": [
+      "Task-centered ordering can make a document easier to use without removing detail.",
+      "Explicit definitions support access for readers outside the author’s specialty."
+    ],
+    "limits": [
+      "Plain language does not mean writing for children or imposing one reading age.",
+      "A readability score does not establish usefulness, accessibility, or factual accuracy."
+    ],
+    "example": {
+      "before": "Pursuant to the revised attendance provisions, participants are requested to effect registration prior to the indicated closing date.",
+      "after": "Register for the workshop by Friday, 5 June. Use the registration form. If you need help completing it, contact the organizer.",
+      "notes": [
+        "The action and deadline come first.",
+        "The support route is stated instead of assuming every reader can use the form.",
+        "The date and contact route are example facts and must be supplied for real use."
+      ]
+    },
+    "template": "# Reader-centered document\nWho is reading?\nWhat do they need to do or understand?\nMain answer:\nAction and deadline:\nDetails in reader order:\nTerms to explain:\nHelp or next step:\n",
+    "checklist": [
+      "Can the intended reader find the main answer?",
+      "Are necessary terms explained?",
+      "Can someone use the information without guessing?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Which question should come first when rewriting a notice?",
+        "options": [
+          "Who needs this information and what will they do with it?",
+          "How can I make every sentence ten words long?",
+          "How can I remove all specialist words?"
+        ],
+        "answer": 0,
+        "explanation": "Purpose and audience guide selection, order, and vocabulary. Sentence length is only one consideration.",
+        "hint": "Start with the reader’s situation.",
+        "id": "plain-language-1"
+      },
+      {
+        "kind": "choice",
+        "question": "A clear notice says “Submit by Friday” but gives no submission method. What is missing?",
+        "options": [
+          "A metaphor",
+          "Information needed to act",
+          "A longer introduction"
+        ],
+        "answer": 1,
+        "explanation": "Understanding the deadline is insufficient if the reader cannot complete the task.",
+        "hint": "Think beyond easy wording.",
+        "id": "plain-language-2"
+      },
+      {
+        "kind": "open",
+        "question": "A newcomer cannot find where to cancel a booking. What would you change before rewriting every sentence?",
+        "explanation": "Add a clearly labeled cancellation route where booking information appears; state the deadline, consequences, and help route. Then test whether a newcomer can complete the task.",
+        "rubric": [
+          "Improve findability",
+          "Preserve conditions and consequences",
+          "Check actual use with a reader"
+        ],
+        "hint": "Consider structure before word substitution.",
+        "id": "plain-language-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Plain language — primary reference",
+        "url": "https://committee.iso.org/standard/78907.html"
+      }
+    ],
+    "related": [
+      "asd-ste100",
+      "diataxis",
+      "progressive-disclosure"
+    ],
+    "tasks": [
+      "explain",
+      "instruct"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "ISO 24495-1",
+      "reader-centered writing"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply Plain language to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Identify the reader and the question they need answered.; Put necessary information where the reader expects to find it.; Use familiar wording while explaining indispensable technical terms..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "diataxis",
+    "title": "Diátaxis",
+    "family": "Language & documentation",
+    "type": "Framework",
+    "level": "Introductory",
+    "summary": "Choose documentation around whether someone is learning or working, and doing or understanding.",
+    "history": [
+      "Daniele Procida developed Diátaxis as an approach to technical documentation. Its four forms distinguish tutorials, how-to guides, reference, and explanation.",
+      "The framework builds a map from reader needs. It is not a file format, a writing standard, or a requirement to make four equally sized sections."
+    ],
+    "purpose": "Give a document a coherent job rather than mixing learning, task completion, lookup, and conceptual discussion indiscriminately.",
+    "principles": [
+      "A tutorial guides a learner through a successful learning experience.",
+      "A how-to guide helps someone with enough background complete a specific task.",
+      "Reference supports precise lookup; explanation develops context and understanding."
+    ],
+    "when": [
+      "Planning a documentation collection or repairing a page that tries to do everything.",
+      "Deciding what an AI-generated answer should accomplish for its reader."
+    ],
+    "benefits": [
+      "Naming the reader need helps authors select the right content.",
+      "Links between forms allow depth without interrupting the immediate task."
+    ],
+    "limits": [
+      "The categories guide judgment; they do not automatically classify every sentence.",
+      "Clear organization cannot compensate for incorrect examples or missing prerequisites."
+    ],
+    "example": {
+      "before": "A “Getting started” page opens with design philosophy, lists every command flag, and ends with an unexplained installation command.",
+      "after": "Tutorial: build a small working example with guidance.\nHow-to: change an existing configuration.\nReference: look up flags and defaults.\nExplanation: understand why the configuration exists.",
+      "notes": [
+        "The same subject can have four different reader jobs.",
+        "The tutorial may link to reference without reproducing every option.",
+        "The explanation can remain useful after the commands change."
+      ]
+    },
+    "template": "# Documentation brief\nReader:\nLearning or working?\nDoing or understanding?\nChosen form:\nPrerequisites:\nOutcome:\nContent needed for this form:\nRelated forms to link:\n",
+    "checklist": [
+      "Is the reader learning or applying existing skill?",
+      "Does the page support action or understanding?",
+      "Have useful details been linked rather than deleted?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "An experienced user needs the exact timeout option and its default. Which form fits?",
+        "options": [
+          "Reference",
+          "Tutorial",
+          "Explanation"
+        ],
+        "answer": 0,
+        "explanation": "The reader is applying existing knowledge and needs precise lookup information.",
+        "hint": "They already know what they want to change.",
+        "id": "diataxis-1"
+      },
+      {
+        "kind": "choice",
+        "question": "A new learner follows a safe exercise to build a first working example. Which form fits?",
+        "options": [
+          "Tutorial",
+          "Reference",
+          "Decision record"
+        ],
+        "answer": 0,
+        "explanation": "A tutorial structures a learning experience rather than simply listing production steps.",
+        "hint": "Look for acquisition of skill through action.",
+        "id": "diataxis-2"
+      },
+      {
+        "kind": "open",
+        "question": "Split a page that mixes “why backups matter,” first-time practice, and command flags.",
+        "explanation": "Create an explanation for rationale, a tutorial for the first practice backup, and reference for flags. Add a how-to when a recurring operational task needs its own route.",
+        "rubric": [
+          "Identify reader needs",
+          "Assign distinct jobs",
+          "Link the forms together"
+        ],
+        "hint": "Different parts may answer different questions.",
+        "id": "diataxis-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Diátaxis — primary reference",
+        "url": "https://diataxis.fr/start-here/"
+      }
+    ],
+    "related": [
+      "worked-examples",
+      "plain-language",
+      "dita"
+    ],
+    "tasks": [
+      "understand",
+      "explain",
+      "instruct"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "documentation quadrants"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply Diátaxis to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: A tutorial guides a learner through a successful learning experience.; A how-to guide helps someone with enough background complete a specific task.; Reference supports precise lookup; explanation develops context and understanding..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "pyramid-principle",
+    "title": "Minto Pyramid Principle",
+    "family": "Language & documentation",
+    "type": "Framework",
+    "level": "Introductory",
+    "summary": "Organize a business explanation around one main point supported by logically grouped reasons.",
+    "history": [
+      "Barbara Minto developed the Pyramid Principle through her work on clear business communication. Her own site describes it as a thinking process as well as a document structure.",
+      "The framework connects a main point to supporting ideas and uses the reader’s question to shape the argument. This guide provides original practice, not the proprietary course or workbook."
+    ],
+    "purpose": "Help a reader follow the relationship between a recommendation, its supporting reasons, and the evidence beneath them.",
+    "principles": [
+      "State the governing point clearly.",
+      "Group supporting ideas by a meaningful logical relationship.",
+      "Check whether the evidence supports each reason and whether the reasons support the conclusion."
+    ],
+    "when": [
+      "A recommendation, proposal, executive brief, or analytical article.",
+      "The author has many observations but no clear answer to the reader’s question."
+    ],
+    "benefits": [
+      "A visible argument structure helps readers inspect the reasoning.",
+      "Grouping exposes reasons that repeat or fail to support the conclusion."
+    ],
+    "limits": [
+      "A persuasive structure can make a weak argument sound stronger.",
+      "Answer-first writing may be unsuitable when the reader needs discovery, narrative, or unresolved inquiry."
+    ],
+    "example": {
+      "before": "Room B has a screen. Some people travel by train. Room A is available. Attendance may be twenty. We should book Room B.",
+      "after": "Recommendation: book Room B.\nReason 1: its verified capacity fits the expected group.\nReason 2: its equipment supports the planned demonstration.\nOpen condition: confirm step-free access before booking.",
+      "notes": [
+        "The recommendation is now inspectable.",
+        "Support must be verified; this teaching example does not invent actual room measurements.",
+        "The open condition limits the recommendation rather than disappearing into the prose."
+      ]
+    },
+    "template": "# Recommendation\nReader’s question:\nMain point:\nReason 1 and evidence:\nReason 2 and evidence:\nAlternatives:\nConditions and uncertainties:\nRequested decision:\n",
+    "checklist": [
+      "Does each reason support the main point?",
+      "Is each factual claim backed by evidence?",
+      "Are uncertainty and alternatives visible?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Which supporting point is weakest for “choose this venue because it meets access needs”?",
+        "options": [
+          "The venue has attractive branding",
+          "A documented step-free entrance",
+          "A measured accessible doorway"
+        ],
+        "answer": 0,
+        "explanation": "Branding does not establish accessibility. The relationship between evidence and conclusion matters more than neat formatting.",
+        "hint": "Check relevance to the stated reason.",
+        "id": "pyramid-principle-1"
+      },
+      {
+        "kind": "choice",
+        "question": "Two headings make the same argument in different words. What should you do?",
+        "options": [
+          "Keep both to look comprehensive",
+          "Add another synonym",
+          "Group or distinguish them"
+        ],
+        "answer": 2,
+        "explanation": "Logical grouping should reveal distinct support, not inflate the apparent number of reasons.",
+        "hint": "Count distinct reasons, not headings.",
+        "id": "pyramid-principle-2"
+      },
+      {
+        "kind": "open",
+        "question": "Draft a main point and two reasons for moving a weekly meeting to an asynchronous update.",
+        "explanation": "Use an asynchronous update for routine status reporting. It preserves a written record and reduces scheduling conflicts. Keep a live meeting for decisions that need discussion; check whether the team can access and contribute to the written update.",
+        "rubric": [
+          "State one recommendation",
+          "Supply distinct relevant reasons",
+          "Retain limits and alternatives"
+        ],
+        "hint": "What would make the recommendation inappropriate?",
+        "id": "pyramid-principle-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Minto Pyramid Principle — primary reference",
+        "url": "https://www.barbaraminto.com/"
+      }
+    ],
+    "related": [
+      "adr",
+      "plain-language",
+      "self-explanation"
+    ],
+    "tasks": [
+      "decide",
+      "explain"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "BLUF",
+      "answer first",
+      "pyramid"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply Minto Pyramid Principle to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: State the governing point clearly.; Group supporting ideas by a meaningful logical relationship.; Check whether the evidence supports each reason and whether the reasons support the conclusion..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "dita",
+    "title": "DITA",
+    "family": "Language & documentation",
+    "type": "Standard",
+    "level": "Advanced",
+    "summary": "Author reusable documentation topics and assemble them for different publications.",
+    "history": [
+      "DITA originated at IBM and became an OASIS standard in 2005. Its name is Darwin Information Typing Architecture.",
+      "The OASIS 1.3 overview explains topic-based authoring, maps, specialization, and reuse. This entry uses that edition as its reference rather than claiming it is the latest edition."
+    ],
+    "purpose": "Manage documentation whose reusable information must appear consistently in several products, guides, or delivery formats.",
+    "principles": [
+      "Write a topic around a bounded reader need.",
+      "Use maps to assemble topics into a publication.",
+      "Use controlled reuse and specialization deliberately, with ownership for shared material."
+    ],
+    "when": [
+      "A help collection repeats the same task across product editions.",
+      "Several manuals must share reviewed warnings and reference material."
+    ],
+    "benefits": [
+      "A shared topic can reduce contradictory copies.",
+      "Separating content from assembly supports several publication structures."
+    ],
+    "limits": [
+      "Adopting XML without a content model does not produce useful reuse.",
+      "Tooling, specialization, and shared ownership can cost more than they save for a small one-off article."
+    ],
+    "example": {
+      "before": "Three event handbooks copy the same cancellation instructions. An update reaches only two of them.",
+      "after": "Topic: cancel-registration\n  Purpose: cancel an existing workshop registration.\n  Prerequisite: a confirmed registration.\n  Steps: open booking; choose cancel; confirm.\nMap A: participant guide → cancel-registration\nMap B: organizer help → cancel-registration",
+      "notes": [
+        "This is a conceptual sketch, not DITA XML.",
+        "Reuse has a named source instead of several untracked copies.",
+        "Publication context still needs review: shared steps may have different prerequisites."
+      ]
+    },
+    "template": "# Topic and reuse plan\nTopic ID:\nTopic type and reader need:\nPrerequisites:\nContent:\nShared references:\nMaps that include this topic:\nOwner and change review:\n",
+    "checklist": [
+      "Does the topic make sense in every assembly?",
+      "Are references and identifiers stable?",
+      "Is reuse reducing actual duplication?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Which is the strongest reason to consider DITA?",
+        "options": [
+          "One short personal note",
+          "A desire to make all prose shorter",
+          "Repeated maintained content across multiple guides"
+        ],
+        "answer": 2,
+        "explanation": "DITA addresses structured authoring and reuse, whose benefits become relevant across maintained publications.",
+        "hint": "Look for repeated content with a lifecycle.",
+        "id": "dita-1"
+      },
+      {
+        "kind": "choice",
+        "question": "A shared topic changes. What still needs review?",
+        "options": [
+          "Every context in which it is assembled",
+          "Only its filename",
+          "Nothing, because reuse guarantees fit"
+        ],
+        "answer": 0,
+        "explanation": "A correct shared topic may become inappropriate for one publication context.",
+        "hint": "Reuse propagates mistakes as well as corrections.",
+        "id": "dita-2"
+      },
+      {
+        "kind": "open",
+        "question": "Two manuals share setup steps but use different warnings. How would you structure the reuse?",
+        "explanation": "Reuse the genuinely common setup material. Keep product-specific warnings attached to their correct contexts and review each assembled manual. Do not force incompatible instructions into a universal topic.",
+        "rubric": [
+          "Identify genuinely shared content",
+          "Keep context-specific constraints",
+          "Review assembled outputs"
+        ],
+        "hint": "Reuse is a design choice, not a word-count target.",
+        "id": "dita-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "DITA — primary reference",
+        "url": "https://docs.oasis-open.org/dita/dita/v1.3/dita-v1.3-part0-overview.html"
+      }
+    ],
+    "related": [
+      "diataxis",
+      "skos",
+      "plain-language"
+    ],
+    "tasks": [
+      "instruct",
+      "explain"
+    ],
+    "prerequisites": "Some familiarity with structured documentation and XML helps.",
+    "aliases": [
+      "Darwin Information Typing Architecture"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply DITA to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Write a topic around a bounded reader need.; Use maps to assemble topics into a publication.; Use controlled reuse and specialization deliberately, with ownership for shared material..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "concept-maps",
+    "title": "Concept mapping",
+    "family": "Learning & explanation",
+    "type": "Method",
+    "level": "Introductory",
+    "summary": "Make relationships between concepts explicit with labeled connections.",
+    "history": [
+      "Joseph Novak and colleagues developed concept mapping in education during the 1970s. Novak and Alberto Cañas explain the method in the IHMC technical report linked below.",
+      "Its focus is propositions: a connection should say something meaningful about two concepts. A branching picture with unlabeled links may be a mind map, but it does not supply the same relationship information."
+    ],
+    "purpose": "Expose how someone understands a subject, including links between ideas that prose can leave implicit.",
+    "principles": [
+      "Start with a focus question.",
+      "Label each link so the connected concepts form a meaningful statement.",
+      "Look for cross-links and check whether each proposition is justified."
+    ],
+    "when": [
+      "Learning an unfamiliar domain or explaining relationships between its terms.",
+      "Comparing a learner’s model before and after a lesson."
+    ],
+    "benefits": [
+      "Labeled relationships reveal more than a list of vocabulary.",
+      "Reviewing a specific link makes a misconception easier to discuss."
+    ],
+    "limits": [
+      "A tidy map may still contain false relationships.",
+      "Very large maps become hard to read; use a focus question and bounded scope."
+    ],
+    "example": {
+      "before": "Workshop → organizer → registration → capacity → participant",
+      "after": "Organizer — sets → capacity\nRegistration — reserves a place for → participant\nCapacity — limits the number of → confirmed registrations\nParticipant — may cancel → registration",
+      "notes": [
+        "Each line is a proposition rather than an unlabeled association.",
+        "The focus is how a workshop place is allocated.",
+        "The cancellation link connects a participant action to the registration model."
+      ]
+    },
+    "template": "# Concept map\nFocus question:\nConcepts:\nConcept A — relationship → Concept B:\nCross-links:\nEvidence for each relationship:\nUncertain relationships:\n",
+    "checklist": [
+      "Can each link be read as a meaningful sentence?",
+      "Does the map answer its focus question?",
+      "Which relationship needs evidence?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Which link expresses the clearest proposition?",
+        "options": [
+          "Capacity — related to → registration",
+          "Capacity — limits the number of → confirmed registrations",
+          "Capacity — arrow → registration"
+        ],
+        "answer": 1,
+        "explanation": "The labeled relationship states a claim that can be examined. A vague connection only records association.",
+        "hint": "Read the nodes and link aloud as a sentence.",
+        "id": "concept-maps-1"
+      },
+      {
+        "kind": "choice",
+        "question": "An AI-generated map looks coherent but links “all participants” to “can edit every document.” What should you do?",
+        "options": [
+          "Accept the diagram",
+          "Only change the colors",
+          "Verify that relationship against the actual rule"
+        ],
+        "answer": 2,
+        "explanation": "Visual coherence does not establish a permission rule. Check the proposition against evidence.",
+        "hint": "Which statement does the arrow assert?",
+        "id": "concept-maps-2"
+      },
+      {
+        "kind": "open",
+        "question": "Map the relationship between a book, an edition, and a copy.",
+        "explanation": "An edition is a published version of a book; a physical copy exemplifies one edition. A library can hold several copies of the same edition. Do not treat the three as synonyms.",
+        "rubric": [
+          "Label relationships",
+          "Distinguish instances and versions",
+          "Avoid unsupported equivalence"
+        ],
+        "hint": "Can two copies belong to one edition?",
+        "id": "concept-maps-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Concept mapping — primary reference",
+        "url": "https://cmap.ihmc.us/docs/theory-of-concept-maps"
+      }
+    ],
+    "related": [
+      "skos",
+      "self-explanation",
+      "uml"
+    ],
+    "tasks": [
+      "understand",
+      "explain"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "concept map",
+      "knowledge map"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply Concept mapping to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Start with a focus question.; Label each link so the connected concepts form a meaningful statement.; Look for cross-links and check whether each proposition is justified..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "worked-examples",
+    "title": "Worked examples",
+    "family": "Learning & explanation",
+    "type": "Teaching method",
+    "level": "Introductory",
+    "summary": "Study a complete solution with reasons before attempting a related problem.",
+    "history": [
+      "Worked examples have a long educational history. Sweller and Cooper’s 1985 algebra study is an influential primary investigation of learning from supplied solutions.",
+      "The teaching choice is how much of the process to show and when to fade support. Results from a particular learning task do not prove that examples always outperform independent practice."
+    ],
+    "purpose": "Give a novice a visible procedure and rationale rather than asking them to discover every step unaided.",
+    "principles": [
+      "Show the starting information, goal, and complete sequence.",
+      "Explain why each step follows.",
+      "Follow the example with a related problem that requires the learner to act."
+    ],
+    "when": [
+      "Introducing an unfamiliar calculation, algorithm, or document technique.",
+      "A learner can imitate an answer but cannot explain the intermediate steps."
+    ],
+    "benefits": [
+      "An annotated solution makes usually hidden transitions inspectable.",
+      "A follow-up problem can expose whether the learner transferred the method."
+    ],
+    "limits": [
+      "Copying a solution can feel like understanding without producing it.",
+      "An expert may need less guidance; unnecessary detail can get in their way."
+    ],
+    "example": {
+      "before": "Find 11 in the sorted list [2, 5, 8, 11, 14]. Answer: position 4.",
+      "after": "1. Inspect the middle item: 8.\n2. Since 11 is greater than 8, discard the lower half including 8.\n3. Inspect the remaining middle candidate: 11.\n4. Report its position as 4 when counting from 1.",
+      "notes": [
+        "The explanation preserves the sorted-list prerequisite.",
+        "The discarded region follows a comparison, not a guess.",
+        "A different example is needed to practise an absent target."
+      ]
+    },
+    "template": "# Worked example\nPrerequisites:\nStarting information:\nGoal:\nStep | action | reason:\nResult and verification:\nRelated problem for the learner:\nWhat changes in the new problem?\n",
+    "checklist": [
+      "Is every step justified?",
+      "Are prerequisite assumptions explicit?",
+      "Can the learner solve a related case without copying?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "What is the best next activity after reading a solved example?",
+        "options": [
+          "Read the exact answer again",
+          "Only rate how clear it felt",
+          "Attempt a related problem and explain the steps"
+        ],
+        "answer": 2,
+        "explanation": "A related task gives evidence of transfer beyond recognition of the original solution.",
+        "hint": "Familiarity and independent performance differ.",
+        "id": "worked-examples-1"
+      },
+      {
+        "kind": "choice",
+        "question": "Binary search is demonstrated without saying the list is sorted. What is missing?",
+        "options": [
+          "A prerequisite",
+          "A decorative diagram",
+          "A conclusion"
+        ],
+        "answer": 0,
+        "explanation": "The comparisons justify discarding a region only under the ordering assumption.",
+        "hint": "What makes elimination valid?",
+        "id": "worked-examples-2"
+      },
+      {
+        "kind": "open",
+        "question": "Create a follow-up task for the binary-search example.",
+        "explanation": "Search for 10 in [2, 5, 8, 11, 14]. Explain each retained interval and why the search ends without a match. This changes the outcome while retaining the method.",
+        "rubric": [
+          "Use a different case",
+          "Require reasons",
+          "Include a checkable final outcome"
+        ],
+        "hint": "Try an absent target instead of another obvious match.",
+        "id": "worked-examples-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Worked examples — primary reference",
+        "url": "https://www.tandfonline.com/doi/abs/10.1207/s1532690xci0201_3"
+      }
+    ],
+    "related": [
+      "self-explanation",
+      "progressive-disclosure",
+      "socratic-questioning"
+    ],
+    "tasks": [
+      "understand"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "worked-example effect",
+      "examples first"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply Worked examples to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Show the starting information, goal, and complete sequence.; Explain why each step follows.; Follow the example with a related problem that requires the learner to act..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "self-explanation",
+    "title": "Self-explanation & teach-back",
+    "family": "Learning & explanation",
+    "type": "Learning method",
+    "level": "Introductory",
+    "summary": "Explain a mechanism in your own words, then check the explanation against evidence.",
+    "history": [
+      "Chi and colleagues’ 1989 study investigated explanations learners generated while studying mechanics examples. It connected the quality of those explanations with how the learners used the material.",
+      "Teach-back is a related practice of explaining understanding to someone else. Popular “Feynman technique” labels are informal shorthand; they are not a standardized assessment or proof of understanding."
+    ],
+    "purpose": "Reveal gaps between recognizing a polished answer and being able to explain why its steps work.",
+    "principles": [
+      "Explain a step without merely repeating its wording.",
+      "Connect the step to a principle or prior fact.",
+      "Check the explanation, correct it, and try a new case."
+    ],
+    "when": [
+      "Studying an example or verifying a mental model after an explanation.",
+      "A learner says an answer makes sense but struggles to predict a result."
+    ],
+    "benefits": [
+      "Articulating a causal link exposes a missing justification.",
+      "Comparing explanations with a source supports targeted correction."
+    ],
+    "limits": [
+      "A fluent explanation may still be wrong.",
+      "An AI tutor can give mistaken feedback; use a reviewed answer or an independent check."
+    ],
+    "example": {
+      "before": "“I understand binary search because it keeps halving the list.”",
+      "after": "“After comparing the target with the middle value, I keep the half that could still contain it. This only works because the list is ordered. If the target is smaller, every value above the middle is also too large.”",
+      "notes": [
+        "The explanation names the condition that makes elimination valid.",
+        "It connects an action to a reason.",
+        "A new task is still needed to check performance."
+      ]
+    },
+    "template": "# Explain it back\nConcept or step:\nMy explanation in my own words:\nWhy does this step work?\nAssumptions:\nPrediction for a new case:\nCheck against source or observation:\nCorrection:\n",
+    "checklist": [
+      "Did I explain why, not only what?",
+      "Which assumption supports the step?",
+      "Did a prediction agree with the result?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Which teach-back gives stronger evidence about a learner’s model?",
+        "options": [
+          "Repeating the definition exactly",
+          "Saying the diagram was clear",
+          "Explaining why an unsorted list breaks binary search"
+        ],
+        "answer": 2,
+        "explanation": "The learner must connect the ordering assumption to the elimination step. That is more informative than reproducing wording.",
+        "hint": "Look for an explanation of a boundary.",
+        "id": "self-explanation-1"
+      },
+      {
+        "kind": "choice",
+        "question": "A model praises your explanation but a small test contradicts it. What should you trust next?",
+        "options": [
+          "The praise",
+          "Investigate the contradiction against the source and test",
+          "The explanation’s confident tone"
+        ],
+        "answer": 1,
+        "explanation": "Feedback is evidence to inspect, not authority that overrides observations.",
+        "hint": "A fluent evaluator can be mistaken.",
+        "id": "self-explanation-2"
+      },
+      {
+        "kind": "open",
+        "question": "Explain why “removing half the items” alone is not a sufficient description of binary search.",
+        "explanation": "The retained half must be justified by order and comparison. Randomly removing half can discard the target. Correct elimination preserves the possibility of finding every remaining valid candidate.",
+        "rubric": [
+          "State the ordering assumption",
+          "Explain comparison-based elimination",
+          "Describe what must remain possible"
+        ],
+        "hint": "What stops the algorithm discarding the answer?",
+        "id": "self-explanation-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Self-explanation & teach-back — primary reference",
+        "url": "https://doi.org/10.1207/s15516709cog1302_1"
+      }
+    ],
+    "related": [
+      "worked-examples",
+      "concept-maps",
+      "socratic-questioning"
+    ],
+    "tasks": [
+      "understand",
+      "explain"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "teach back",
+      "Feynman technique",
+      "explain it back"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply Self-explanation & teach-back to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Explain a step without merely repeating its wording.; Connect the step to a principle or prior fact.; Check the explanation, correct it, and try a new case..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "socratic-questioning",
+    "title": "Socratic questioning",
+    "family": "Learning & explanation",
+    "type": "Method",
+    "level": "Introductory",
+    "summary": "Use focused questions to examine definitions, assumptions, evidence, and consequences.",
+    "history": [
+      "The approach takes its name from Socrates as portrayed in Plato’s dialogues. Meno is a primary historical example of learning and inquiry through questioning.",
+      "Modern teaching adaptations vary. A historical dialogue is not a clinical trial, and the name does not specify a single validated chatbot procedure."
+    ],
+    "purpose": "Help a learner inspect their own understanding rather than receive every conclusion immediately.",
+    "principles": [
+      "Begin with the learner’s current claim.",
+      "Ask one question that examines an assumption or implication.",
+      "Allow an answer, then use it to choose the next question."
+    ],
+    "when": [
+      "A learner has enough background to attempt an explanation.",
+      "A team needs to examine a confident claim and its hidden assumptions."
+    ],
+    "benefits": [
+      "A targeted question can expose a specific reasoning gap.",
+      "The learner participates in constructing and testing an explanation."
+    ],
+    "limits": [
+      "Endless questions can frustrate someone who needs an immediate instruction.",
+      "Leading questions can disguise the tutor’s assumptions; offer explanation when questioning stops helping."
+    ],
+    "example": {
+      "before": "Learner: “The first item must be the middle of a list.”\nTutor: “No. Here is the definition and the full solution…”",
+      "after": "Tutor: “In a list of five items, how many items would be on each side of the first item?”\nLearner: “Zero on one side and four on the other.”\nTutor: “Which position would leave the same number on both sides?”",
+      "notes": [
+        "The question tests a concrete implication.",
+        "The tutor does not need an LLM: an authored branch can respond to known choices.",
+        "A real conversation needs responsiveness beyond this fixed example."
+      ]
+    },
+    "template": "# Questioning sequence\nLearner’s claim:\nA concrete example:\nFirst question:\nWhat each possible answer reveals:\nNext question or explanation:\nWhen to stop questioning:\n",
+    "checklist": [
+      "Does the question test one idea?",
+      "Can the learner answer with their current knowledge?",
+      "Is an explicit explanation available when needed?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Which question best examines “a diagram proves the rule is correct”?",
+        "options": [
+          "Why are you wrong?",
+          "What evidence would distinguish a correct rule from an incorrect rule drawn neatly?",
+          "Would you like a prettier diagram?"
+        ],
+        "answer": 1,
+        "explanation": "The question asks for a criterion that tests the claim without assuming the answer through accusation.",
+        "hint": "Ask for evidence, not agreement.",
+        "id": "socratic-questioning-1"
+      },
+      {
+        "kind": "choice",
+        "question": "The learner lacks the vocabulary to answer. What should the tutor do?",
+        "options": [
+          "Keep asking the same question",
+          "Supply the missing explanation or example",
+          "Mark the learner as unable to learn"
+        ],
+        "answer": 1,
+        "explanation": "Questioning depends on usable prior knowledge. Scaffolding can restore a productive discussion.",
+        "hint": "Support is part of teaching.",
+        "id": "socratic-questioning-2"
+      },
+      {
+        "kind": "open",
+        "question": "Write a question that tests whether a learner understands duplicate registration handling.",
+        "explanation": "If the same person submits the same registration twice, how many places should be reserved, and what observation would show the rule was followed?",
+        "rubric": [
+          "Use a concrete case",
+          "Invite a prediction",
+          "Ask how to check it"
+        ],
+        "hint": "A good question can reveal an unstated assumption.",
+        "id": "socratic-questioning-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Socratic questioning — primary reference",
+        "url": "https://classics.mit.edu/Plato/meno.html"
+      }
+    ],
+    "related": [
+      "self-explanation",
+      "worked-examples",
+      "progressive-disclosure"
+    ],
+    "tasks": [
+      "understand",
+      "decide"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "Socratic method",
+      "guided questioning"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply Socratic questioning to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Begin with the learner’s current claim.; Ask one question that examines an assumption or implication.; Allow an answer, then use it to choose the next question..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "progressive-disclosure",
+    "title": "Progressive disclosure",
+    "family": "Learning & explanation",
+    "type": "Interaction pattern",
+    "level": "Introductory",
+    "summary": "Reveal detail when it becomes useful while keeping essential information easy to find.",
+    "history": [
+      "Progressive disclosure is an interface-design pattern. Jakob Nielsen’s 2006 account describes prioritizing common information and moving additional complexity into secondary views.",
+      "Applying the pattern to explanation is a design choice: initial simplicity and available depth must be balanced against the risk of hiding necessary context."
+    ],
+    "purpose": "Let readers start with a manageable view and deliberately reveal the depth they need.",
+    "principles": [
+      "Keep the main result and essential constraints visible.",
+      "Label additional detail by the question it answers.",
+      "Preserve orientation when details open or views change."
+    ],
+    "when": [
+      "A topic has useful beginner, intermediate, and advanced layers.",
+      "A reference page serves readers with different levels of prior knowledge."
+    ],
+    "benefits": [
+      "Readers can control the amount of detail they inspect.",
+      "A stable structure can support both a quick answer and a deeper investigation."
+    ],
+    "limits": [
+      "Hiding warnings, prerequisites, or the main answer makes the interface misleading.",
+      "Too many nested disclosures make information hard to discover or print."
+    ],
+    "example": {
+      "before": "A beginner asks about a loop and immediately receives iterator protocols, implementation internals, generators, and every edge case.",
+      "after": "Visible: a loop repeats an action for each item.\nExample: print each name in a list.\nMore detail: what the loop variable holds.\nAdvanced: how iter() and next() participate.\nAlways visible: the exact code and expected result.",
+      "notes": [
+        "The introductory view answers a coherent question.",
+        "Labels tell the reader what opening each layer adds.",
+        "The same facts must remain consistent across levels."
+      ]
+    },
+    "template": "# Layered explanation\nMain answer:\nEssential conditions:\nConcrete example:\nLayer 2 question and detail:\nLayer 3 question and detail:\nHow to return to the overview:\n",
+    "checklist": [
+      "Are critical conditions visible from the start?",
+      "Do disclosure labels predict their contents?",
+      "Can a reader reach and print all detail?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Which information should stay visible in a simplified deletion procedure?",
+        "options": [
+          "The irreversible consequence",
+          "Every implementation detail",
+          "The full history of the interface"
+        ],
+        "answer": 0,
+        "explanation": "A consequence essential to an informed action must not be hidden merely to simplify the screen.",
+        "hint": "Separate optional detail from necessary context.",
+        "id": "progressive-disclosure-1"
+      },
+      {
+        "kind": "choice",
+        "question": "Which disclosure label is most useful?",
+        "options": [
+          "Why the list must be sorted",
+          "More",
+          "Details"
+        ],
+        "answer": 0,
+        "explanation": "A specific question helps the reader decide whether the hidden content is relevant.",
+        "hint": "The label should preview the information.",
+        "id": "progressive-disclosure-2"
+      },
+      {
+        "kind": "open",
+        "question": "Design three layers for explaining a workshop waitlist.",
+        "explanation": "Start with what joining the waitlist means and that it is not a confirmed place. Next show how an offer is made and expires. Finally explain the ordering rule and exceptional cases.",
+        "rubric": [
+          "Keep the non-confirmation warning visible",
+          "Name each deeper question",
+          "Preserve the same underlying rules"
+        ],
+        "hint": "Which misunderstanding could occur before opening a detail?",
+        "id": "progressive-disclosure-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Progressive disclosure — primary reference",
+        "url": "https://www.nngroup.com/articles/progressive-disclosure/"
+      }
+    ],
+    "related": [
+      "diataxis",
+      "worked-examples",
+      "plain-language"
+    ],
+    "tasks": [
+      "understand",
+      "explain"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "layered explanation",
+      "progressive detail"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply Progressive disclosure to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Keep the main result and essential constraints visible.; Label additional detail by the question it answers.; Preserve orientation when details open or views change..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "c4",
+    "title": "C4 model",
+    "family": "Architecture & structure",
+    "type": "Model",
+    "level": "Introductory",
+    "summary": "Explain a software architecture through a small set of consistent levels of detail.",
+    "history": [
+      "Simon Brown created C4 to help software teams communicate architecture. Its name refers to context, containers, components, and code.",
+      "The official model separates architectural abstractions from the notation used to draw them. Teams should use the views that answer real questions rather than produce every level automatically."
+    ],
+    "purpose": "Give readers an appropriate architectural map without mixing people, whole systems, applications, and implementation details indiscriminately.",
+    "principles": [
+      "Choose a level of zoom before choosing boxes.",
+      "Name each element’s responsibility and relevant technology.",
+      "Label relationships with their meaning and direction."
+    ],
+    "when": [
+      "Introducing a system to a newcomer or inspecting its boundaries.",
+      "A diagram mixes cloud vendors, individual functions, and whole organizations at one unexplained level."
+    ],
+    "benefits": [
+      "Consistent zoom levels support different reader questions.",
+      "Explicit boundaries and responsibilities expose missing dependencies."
+    ],
+    "limits": [
+      "A C4 container means an application or data store, not necessarily a Docker container.",
+      "A structural view does not prove runtime order, security enforcement, or reliability."
+    ],
+    "example": {
+      "before": "User → cloud → service → function → database → company",
+      "after": "Context: a reader uses the document workspace; the workspace sends email through a notification system.\nContainer: browser application → workspace API → document store.\nComponent: the API contains authorization and document-access components.\nCode: inspect selected implementation elements only when useful.",
+      "notes": [
+        "The context view treats the workspace as one system.",
+        "The container view opens that boundary without mixing in functions.",
+        "A sequence diagram can separately explain authorization before retrieval."
+      ]
+    },
+    "template": "# C4 view\nQuestion and audience:\nLevel: context / container / component / code\nSystem boundary:\nElements: name | responsibility | type or technology\nRelationships: source | verb | destination | protocol if relevant\nExternal dependencies:\nExcluded detail:\n",
+    "checklist": [
+      "Are elements at a consistent level?",
+      "Does every arrow have a meaningful label?",
+      "Are deployment and behavior claims supported separately?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "A C4 container is always what?",
+        "options": [
+          "A Docker image",
+          "An individual function",
+          "An application or data store in the architectural model"
+        ],
+        "answer": 2,
+        "explanation": "C4 uses container as an architectural abstraction. Its meaning is broader than containerization technology.",
+        "hint": "Separate model vocabulary from deployment tooling.",
+        "id": "c4-1"
+      },
+      {
+        "kind": "choice",
+        "question": "Which view answers whether authorization happens before fetching a document?",
+        "options": [
+          "A context view alone",
+          "A larger logo for the authorization service",
+          "An interaction or sequence view"
+        ],
+        "answer": 2,
+        "explanation": "Call order is behavioral information. A dependency arrow alone does not establish the sequence.",
+        "hint": "What kind of information is time order?",
+        "id": "c4-2"
+      },
+      {
+        "kind": "open",
+        "question": "Describe a context view for a library reservation service without listing internal functions.",
+        "explanation": "Show members using the reservation service and the service interacting with external catalog or notification systems. State each participant’s responsibility and the scope of the service boundary.",
+        "rubric": [
+          "Keep system-level abstractions",
+          "Include people and external systems",
+          "Label relationships"
+        ],
+        "hint": "Could a reader understand the boundary without seeing implementation names?",
+        "id": "c4-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "C4 model — primary reference",
+        "url": "https://c4model.com/diagrams"
+      },
+      {
+        "title": "C4 history",
+        "url": "https://c4model.com/history"
+      }
+    ],
+    "related": [
+      "uml",
+      "arc42",
+      "adr"
+    ],
+    "tasks": [
+      "describe",
+      "understand"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "context container component code",
+      "architecture map"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply C4 model to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Choose a level of zoom before choosing boxes.; Name each element’s responsibility and relevant technology.; Label relationships with their meaning and direction..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "uml",
+    "title": "UML",
+    "family": "Architecture & structure",
+    "type": "Modeling language",
+    "level": "Intermediate",
+    "summary": "Choose a defined notation for structure, interactions, activities, or state changes.",
+    "history": [
+      "UML unified earlier object-oriented modeling approaches and became an OMG standard in 1997. The OMG specification is the authoritative reference for its semantics.",
+      "This entry references UML 2.5.1. A class diagram, sequence diagram, activity diagram, and state machine describe different aspects of a system; they are not interchangeable decorations."
+    ],
+    "purpose": "Make the aspect being modeled explicit so readers can inspect relationships or behavior with a shared notation.",
+    "principles": [
+      "Use a class view for types, associations, and multiplicities.",
+      "Use a sequence view for messages in time order; include important alternate paths.",
+      "Use activity or state-machine views for flow or lifecycle questions."
+    ],
+    "when": [
+      "You need to examine object relationships or an interaction.",
+      "The question concerns which event changes an object’s state."
+    ],
+    "benefits": [
+      "A suitable diagram can expose missing participants or outcomes.",
+      "Defined notation supports discussion beyond an author’s private drawing conventions."
+    ],
+    "limits": [
+      "A diagram is only as accurate as the model it depicts.",
+      "Notation tools may implement a subset or simplified semantics; rendered output is not a conformance check."
+    ],
+    "example": {
+      "before": "The system checks access and returns a document.",
+      "after": "Sequence sketch:\nReader → App: read document\nApp → Authorization: check membership\n[allow] App → Store: retrieve\n[deny] App → Reader: denied\n\nClass sketch: Team 1 — 0..* Membership\nActivity sketch: request → check → allow / deny\nState sketch: Membership active → revoked",
+      "notes": [
+        "These textual sketches introduce distinct UML views; they are not a full normative model.",
+        "The deny branch is observable.",
+        "The class relationship and lifecycle need their own domain review."
+      ]
+    },
+    "template": "# UML modeling brief\nQuestion:\nChosen diagram type:\nParticipants or types:\nRelationships and multiplicities:\nMessages / actions / events:\nAlternate or failure paths:\nConstraints:\nSource evidence:\n",
+    "checklist": [
+      "Does the diagram type fit the question?",
+      "Are alternate outcomes modeled?",
+      "Do labels and multiplicities match the domain?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Which UML view best answers “who sends which messages during a request”?",
+        "options": [
+          "Class diagram",
+          "Package inventory",
+          "Sequence diagram"
+        ],
+        "answer": 2,
+        "explanation": "A sequence diagram focuses on interactions among participants over time.",
+        "hint": "Look for message ordering.",
+        "id": "uml-1"
+      },
+      {
+        "kind": "choice",
+        "question": "Which view best captures a registration moving from waitlisted to confirmed?",
+        "options": [
+          "Class diagram alone",
+          "State machine",
+          "Technology landscape"
+        ],
+        "answer": 1,
+        "explanation": "The question is about state and transitions triggered by events.",
+        "hint": "Distinguish what exists from how it changes.",
+        "id": "uml-2"
+      },
+      {
+        "kind": "open",
+        "question": "A sequence has only a success path. Add the missing behavior when authorization denies a read.",
+        "explanation": "Show an alternative in which authorization returns deny and the application returns an access-denied response without retrieving or sending document contents.",
+        "rubric": [
+          "Include the decision response",
+          "Stop the protected read",
+          "Show an observable denial"
+        ],
+        "hint": "What operation must not occur on the deny path?",
+        "id": "uml-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "UML — primary reference",
+        "url": "https://www.omg.org/spec/UML/"
+      }
+    ],
+    "related": [
+      "c4",
+      "scxml",
+      "erd"
+    ],
+    "tasks": [
+      "describe",
+      "specify"
+    ],
+    "prerequisites": "Understand the entities or behavior you want to model; notation can then be introduced.",
+    "aliases": [
+      "Unified Modeling Language",
+      "sequence diagram",
+      "class diagram",
+      "activity diagram",
+      "state machine"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply UML to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Use a class view for types, associations, and multiplicities.; Use a sequence view for messages in time order; include important alternate paths.; Use activity or state-machine views for flow or lifecycle questions..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "erd",
+    "title": "Entity–relationship modeling",
+    "family": "Architecture & structure",
+    "type": "Modeling method",
+    "level": "Intermediate",
+    "summary": "Describe entities, relationships, and cardinality before designing or interpreting data.",
+    "history": [
+      "Peter Chen’s 1976 paper introduced the entity–relationship model as a unified view of data. Later notations, including crow’s foot, express similar relationship questions with different symbols.",
+      "An ER model describes the domain or data structure. A database implementation adds decisions about keys, constraints, storage, and transactions."
+    ],
+    "purpose": "Make it clear which things are distinct and how many of one may relate to another.",
+    "principles": [
+      "Identify entities and their identities.",
+      "Name relationships and specify minimum and maximum participation.",
+      "Separate a conceptual relationship from its storage implementation."
+    ],
+    "when": [
+      "Designing a registration system or understanding an existing data model.",
+      "Ambiguous terms hide whether two records are different entities or repeated descriptions."
+    ],
+    "benefits": [
+      "Cardinality exposes assumptions that ordinary nouns leave implicit.",
+      "An explicit relationship model helps inspect duplicate and missing-record cases."
+    ],
+    "limits": [
+      "A diagram does not enforce database constraints.",
+      "Data relationships alone do not define authorization, temporal rules, or process order."
+    ],
+    "example": {
+      "before": "People book workshops. Store the person’s name next to the workshop name.",
+      "after": "Participant (participant_id)\nWorkshop (workshop_id)\nRegistration (registration_id, participant_id, workshop_id)\n\nA participant can have zero or many registrations.\nA workshop can have zero or many registrations.\nEach registration refers to exactly one participant and one workshop.",
+      "notes": [
+        "Registration represents the association and can carry its own state.",
+        "Names are attributes, not necessarily stable identifiers.",
+        "Preventing duplicate active registrations requires an additional rule."
+      ]
+    },
+    "template": "# Entity–relationship model\nEntities and identities:\nAttributes:\nRelationship name:\nMinimum / maximum participation at each end:\nUniqueness rules:\nOptional relationships:\nLifecycle or history questions:\n",
+    "checklist": [
+      "Are identities distinguished from display names?",
+      "Are optional and many-valued relationships explicit?",
+      "Which constraints need implementation beyond the diagram?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Why introduce Registration between Participant and Workshop?",
+        "options": [
+          "To make the diagram larger",
+          "Because every relationship must have an extra entity",
+          "To represent a relationship that can have its own identity and attributes"
+        ],
+        "answer": 2,
+        "explanation": "A registration may carry status and timestamps. An association entity can model those facts without pretending every relationship needs one.",
+        "hint": "Can the relationship itself have properties?",
+        "id": "erd-1"
+      },
+      {
+        "kind": "choice",
+        "question": "Does an ER diagram alone prevent two active registrations for the same person and workshop?",
+        "options": [
+          "No; a uniqueness rule and enforcement are also needed",
+          "Yes",
+          "Only if the boxes are blue"
+        ],
+        "answer": 0,
+        "explanation": "The model can state the rule, but the database and application must enforce it.",
+        "hint": "Description and enforcement differ.",
+        "id": "erd-2"
+      },
+      {
+        "kind": "open",
+        "question": "Explain why a person’s name is a poor default primary identity.",
+        "explanation": "Different people can share a name and one person’s name can change. Use a stable identifier and treat the name as an attribute, subject to the domain’s actual identity rules.",
+        "rubric": [
+          "Consider collisions",
+          "Consider changes",
+          "Separate identity from presentation"
+        ],
+        "hint": "Can a label be non-unique or mutable?",
+        "id": "erd-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Entity–relationship modeling — primary reference",
+        "url": "https://doi.org/10.1145/320434.320440"
+      }
+    ],
+    "related": [
+      "uml",
+      "json-schema",
+      "skos"
+    ],
+    "tasks": [
+      "describe",
+      "specify"
+    ],
+    "prerequisites": "Some familiarity with records and identifiers helps.",
+    "aliases": [
+      "ERD",
+      "entity relationship diagram",
+      "crow foot"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply Entity–relationship modeling to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Identify entities and their identities.; Name relationships and specify minimum and maximum participation.; Separate a conceptual relationship from its storage implementation..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "arc42",
+    "title": "arc42",
+    "family": "Architecture & structure",
+    "type": "Documentation template",
+    "level": "Intermediate",
+    "summary": "Document architecture through a coherent set of questions about context, structure, behavior, quality, and risk.",
+    "history": [
+      "Gernot Starke and Peter Hruschka developed arc42 as a pragmatic architecture-documentation template. The official overview describes twelve sections and notes use since 2005.",
+      "Its organization brings several architectural views and decisions together. It does not require a particular diagramming product or a large document for every system."
+    ],
+    "purpose": "Keep the information needed to understand and evaluate an architecture in a predictable, maintainable structure.",
+    "principles": [
+      "State goals, quality priorities, and constraints before explaining a solution.",
+      "Connect context, building blocks, runtime, and deployment views.",
+      "Record decisions, risks, and a shared glossary rather than hiding them behind diagrams."
+    ],
+    "when": [
+      "A maintained system needs a usable architecture reference.",
+      "Several diagrams exist but their rationale, assumptions, and quality goals are scattered."
+    ],
+    "benefits": [
+      "A shared structure can reveal missing information.",
+      "Linking decisions and risks helps explain why the architecture has its current shape."
+    ],
+    "limits": [
+      "Filling every heading with generic prose creates documentation without insight.",
+      "A completed template does not establish that quality goals are met."
+    ],
+    "example": {
+      "before": "Architecture document: a diagram, a technology list, and “the system is scalable.”",
+      "after": "Goals: new readers can trace document access.\nConstraint: work offline during a network outage.\nBuilding blocks: local cache and synchronization service.\nRuntime: read locally, then reconcile changes.\nDecision: conflict handling follows an explicit rule.\nRisk: concurrent edits need further validation.",
+      "notes": [
+        "Quality claims become questions that require evidence.",
+        "The runtime view adds behavior to the structure.",
+        "The unresolved risk remains visible."
+      ]
+    },
+    "template": "# Architecture brief\nGoals and quality priorities:\nConstraints:\nContext and scope:\nSolution strategy:\nBuilding blocks:\nRuntime scenarios:\nDeployment:\nCross-cutting concepts:\nDecisions:\nQuality scenarios:\nRisks and technical debt:\nGlossary:\n",
+    "checklist": [
+      "Do the views describe the same system?",
+      "Can a reader trace a quality goal to a scenario?",
+      "Are consequential decisions and risks recorded?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Where should “must work during a network outage” first influence the document?",
+        "options": [
+          "Only the color scheme",
+          "Goals and constraints",
+          "Only the glossary"
+        ],
+        "answer": 1,
+        "explanation": "The requirement should shape the solution and its quality scenarios, not appear as a decorative claim afterward.",
+        "hint": "Architecture follows constraints.",
+        "id": "arc42-1"
+      },
+      {
+        "kind": "choice",
+        "question": "Does filling all twelve sections establish a good architecture?",
+        "options": [
+          "No; the content and supporting evidence still matter",
+          "Yes",
+          "Only if each section has equal length"
+        ],
+        "answer": 0,
+        "explanation": "Coverage of headings is different from adequacy of the design or its evidence.",
+        "hint": "A template is a structure for inquiry.",
+        "id": "arc42-2"
+      },
+      {
+        "kind": "open",
+        "question": "Turn “fast enough” into a quality scenario without inventing numbers.",
+        "explanation": "Identify the user action, operating conditions, measurable response, and agreed limit. Leave the limit unresolved until stakeholders supply or approve it, then test under the stated load.",
+        "rubric": [
+          "Name action and conditions",
+          "Specify a measurable response",
+          "Do not invent acceptance thresholds"
+        ],
+        "hint": "Which missing parameter prevents a meaningful check?",
+        "id": "arc42-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "arc42 — primary reference",
+        "url": "https://arc42.org/overview/"
+      },
+      {
+        "title": "arc42 origin and authors",
+        "url": "https://arc42.org/about/"
+      }
+    ],
+    "related": [
+      "c4",
+      "adr",
+      "uml"
+    ],
+    "tasks": [
+      "describe",
+      "decide"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "architecture documentation"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply arc42 to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: State goals, quality priorities, and constraints before explaining a solution.; Connect context, building blocks, runtime, and deployment views.; Record decisions, risks, and a shared glossary rather than hiding them behind diagrams..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "adr",
+    "title": "Architecture decision records",
+    "family": "Architecture & structure",
+    "type": "Documentation convention",
+    "level": "Introductory",
+    "summary": "Preserve why a consequential choice was made and what follows from it.",
+    "history": [
+      "Michael Nygard’s 2011 article popularized lightweight architecture decision records. He proposed small records for significant decisions rather than a single document that is difficult to keep current.",
+      "The core record names context, decision, status, and consequences. Later templates add options, evidence, and review triggers; these are useful adaptations rather than one universal standard."
+    ],
+    "purpose": "Let a future reader understand the rationale for a choice without reconstructing the original discussion.",
+    "principles": [
+      "Record the concrete problem and constraints.",
+      "State the decision and its status.",
+      "Preserve consequences, alternatives, and the conditions under which to revisit it."
+    ],
+    "when": [
+      "Selecting a data store, policy boundary, output format, or operational approach.",
+      "A team repeatedly revisits a choice because its rationale was lost."
+    ],
+    "benefits": [
+      "An explicit status separates a proposal from an accepted decision.",
+      "Consequences help future maintainers understand the tradeoff they inherit."
+    ],
+    "limits": [
+      "An ADR records judgment; it does not prove the choice was optimal.",
+      "A stale accepted record must be superseded or revisited rather than silently treated as timeless truth."
+    ],
+    "example": {
+      "before": "“Use a static guide because it is better.”",
+      "after": "Context: the guide must have no runtime model costs.\nDecision: publish prepared content and browser-side interactions.\nStatus: accepted for this release.\nConsequences: arbitrary visitor documents cannot receive generated feedback.\nRevisit: if the desired capabilities change.",
+      "notes": [
+        "The constraint supports the choice.",
+        "The consequence records what the architecture gives up.",
+        "The revisit condition avoids pretending the decision is universal."
+      ]
+    },
+    "template": "# Decision record\nTitle:\nStatus: proposed / accepted / superseded\nContext and constraints:\nOptions considered:\nDecision:\nEvidence and assumptions:\nConsequences:\nRevisit when:\nSupersedes / superseded by:\n",
+    "checklist": [
+      "Is the status accurate?",
+      "Can someone reconstruct the reasons?",
+      "Are consequences and revisit conditions concrete?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "A draft suggests replacing a database but nobody has agreed. Which status fits?",
+        "options": [
+          "Accepted",
+          "Superseded",
+          "Proposed"
+        ],
+        "answer": 2,
+        "explanation": "A record must distinguish a suggestion from a team decision.",
+        "hint": "A polished document does not create agreement.",
+        "id": "adr-1"
+      },
+      {
+        "kind": "choice",
+        "question": "The original constraints no longer hold. What should happen?",
+        "options": [
+          "Delete the old rationale",
+          "Assume accepted means permanent",
+          "Review the decision and preserve the history when superseding it"
+        ],
+        "answer": 2,
+        "explanation": "Historical rationale remains useful even when a new decision replaces it.",
+        "hint": "Make change traceable.",
+        "id": "adr-2"
+      },
+      {
+        "kind": "open",
+        "question": "Write one consequence of choosing a static site with no LLM.",
+        "explanation": "The site can provide prepared examples, rules, and templates, but cannot interpret arbitrary user documents to generate tailored semantic feedback. Visitors can apply templates themselves or in their own tools.",
+        "rubric": [
+          "Connect consequence to choice",
+          "State a real capability boundary",
+          "Avoid claiming all interactivity is impossible"
+        ],
+        "hint": "What remains possible entirely in the browser?",
+        "id": "adr-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Architecture decision records — primary reference",
+        "url": "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions"
+      }
+    ],
+    "related": [
+      "pyramid-principle",
+      "arc42",
+      "dmn"
+    ],
+    "tasks": [
+      "decide",
+      "describe"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "ADR",
+      "decision record"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply Architecture decision records to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Record the concrete problem and constraints.; State the decision and its status.; Preserve consequences, alternatives, and the conditions under which to revisit it..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "ears",
+    "title": "EARS",
+    "family": "Requirements & behavior",
+    "type": "Requirements syntax",
+    "level": "Introductory",
+    "summary": "Give a textual requirement explicit context, trigger, and observable system response.",
+    "history": [
+      "Alistair Mavin and colleagues developed EARS while analyzing requirements for a jet-engine control system at Rolls-Royce. The notation was first published in 2009.",
+      "Its small set of patterns constrains requirement structure without introducing a general-purpose programming language. The creator’s guide is the primary reference."
+    ],
+    "purpose": "Reduce ambiguity in behavioral requirements while keeping them readable to people who do not use formal logic.",
+    "principles": [
+      "Identify the system that must respond.",
+      "State the trigger or applicable state before the response.",
+      "Specify an observable response and retain conditions and exceptions."
+    ],
+    "when": [
+      "Turning a feature intention into reviewable behavior.",
+      "A requirement uses “quickly,” “appropriately,” or an unclear actor."
+    ],
+    "benefits": [
+      "An explicit trigger makes it easier to construct a scenario.",
+      "A named response exposes missing acceptance details."
+    ],
+    "limits": [
+      "Correct syntax can express the wrong policy.",
+      "Timing limits, scope, and priorities still require real decisions; do not invent them to complete a sentence."
+    ],
+    "example": {
+      "before": "The workspace should handle former members appropriately.",
+      "after": "When a former team member requests a team document, the workspace shall deny the new read request.\nScope: this requirement concerns new requests after revocation.\nOpen decision: how to handle in-flight reads and cached copies.",
+      "notes": [
+        "The trigger and response can be exercised in a scenario.",
+        "The requirement distinguishes new requests from broader revocation behavior.",
+        "The missing policy is recorded as a question."
+      ]
+    },
+    "template": "# Behavioral requirement\nSystem:\nContext or applicable state:\nTrigger:\nRequired observable response:\nTiming or limits (agreed):\nExceptions:\nOpen decisions:\nConcrete examples:\n",
+    "checklist": [
+      "Is the actor or system named?",
+      "Can the trigger and response be observed?",
+      "Are unresolved thresholds marked as unresolved?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Which requirement is most testable as written?",
+        "options": [
+          "When an email is missing, the form shows an email-required error",
+          "The app handles mistakes well",
+          "The app is user-friendly"
+        ],
+        "answer": 0,
+        "explanation": "The condition and visible response are explicit. The others require interpretation before a check can be written.",
+        "hint": "Look for a trigger and an observable result.",
+        "id": "ears-1"
+      },
+      {
+        "kind": "choice",
+        "question": "“The system responds quickly” has no agreed limit. What should the author do?",
+        "options": [
+          "Record the missing acceptance limit",
+          "Invent 100 ms",
+          "Remove the performance requirement"
+        ],
+        "answer": 0,
+        "explanation": "The syntax cannot supply a stakeholder decision. Keep the gap visible.",
+        "hint": "Writing a precise-looking number is not evidence of agreement.",
+        "id": "ears-2"
+      },
+      {
+        "kind": "open",
+        "question": "Write a requirement for a duplicate confirmed workshop registration.",
+        "explanation": "When a participant resubmits an already confirmed registration for the same workshop, the registration service shall return the existing confirmation without allocating another place.",
+        "rubric": [
+          "Identify the duplicate context",
+          "Specify the response",
+          "Preserve the capacity consequence"
+        ],
+        "hint": "What resource must not be consumed twice?",
+        "id": "ears-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "EARS — primary reference",
+        "url": "https://alistairmavin.com/ears/"
+      }
+    ],
+    "related": [
+      "gherkin",
+      "example-mapping",
+      "bcp14"
+    ],
+    "tasks": [
+      "specify",
+      "instruct"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "Easy Approach to Requirements Syntax"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply EARS to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Identify the system that must respond.; State the trigger or applicable state before the response.; Specify an observable response and retain conditions and exceptions..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "bcp14",
+    "title": "BCP 14 requirement levels",
+    "family": "Requirements & behavior",
+    "type": "IETF convention",
+    "level": "Introductory",
+    "summary": "Distinguish mandatory requirements, recommendations, and genuine options.",
+    "history": [
+      "RFC 2119 defined requirement keywords for IETF documents in 1997. RFC 8174 clarified in 2017 that the special meanings apply to uppercase keywords when the convention is adopted.",
+      "Together these documents form BCP 14. The convention concerns requirement strength; it does not define a complete specification-writing method."
+    ],
+    "purpose": "Prevent readers from treating a recommendation as mandatory, or a mandatory constraint as optional advice.",
+    "principles": [
+      "Declare that the document uses the BCP 14 convention.",
+      "Use MUST, SHOULD, and MAY deliberately with their defined meanings.",
+      "Supply enough context to understand exceptions and implementation consequences."
+    ],
+    "when": [
+      "A protocol, output contract, or specification needs consistent requirement strength.",
+      "“Should” is used casually where a mandatory outcome is intended."
+    ],
+    "benefits": [
+      "A reader can distinguish obligations from recommendations.",
+      "A reviewer can ask why a requirement permits exceptions."
+    ],
+    "limits": [
+      "Capitalization does not make an ambiguous requirement measurable.",
+      "A SHOULD is not simply unimportant; departures need understanding of the implications."
+    ],
+    "example": {
+      "before": "The exporter should include a title and maybe include a timestamp.",
+      "after": "This specification adopts BCP 14 keyword meanings.\nThe exported report MUST include its source revision.\nThe report SHOULD include a human-readable title.\nThe report MAY include an optional display theme.",
+      "notes": [
+        "Each strength is an explicit choice in this original example.",
+        "The revision requirement still needs a definition of the revision format.",
+        "An optional theme must not silently become required to read the report."
+      ]
+    },
+    "template": "# Requirement strength review\nConvention declaration:\nMandatory behaviors and rationale:\nRecommended behaviors and exception conditions:\nOptional behaviors:\nDefinitions and measurable checks:\n",
+    "checklist": [
+      "Is the convention declared?",
+      "Does each keyword reflect intended strength?",
+      "Are the required behaviors specific enough to evaluate?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Which keyword indicates a genuine implementation option under this convention?",
+        "options": [
+          "MUST",
+          "MAY",
+          "SHOULD"
+        ],
+        "answer": 1,
+        "explanation": "MAY marks an optional behavior. It should not hide a dependency that makes the supposedly optional feature necessary.",
+        "hint": "Distinguish optional from recommended.",
+        "id": "bcp14-1"
+      },
+      {
+        "kind": "choice",
+        "question": "Does writing “MUST be fast” make the requirement measurable?",
+        "options": [
+          "No; fast still needs an agreed definition",
+          "Yes",
+          "Only if MUST is bold"
+        ],
+        "answer": 0,
+        "explanation": "Requirement strength and acceptance criteria solve different problems.",
+        "hint": "Capitalization does not define a threshold.",
+        "id": "bcp14-2"
+      },
+      {
+        "kind": "open",
+        "question": "A critical source reference is written as “the report MAY include provenance.” What needs review?",
+        "explanation": "Decide whether the reference is genuinely optional. If review depends on it, use an appropriate mandatory requirement and define what provenance must contain. Do not change strength without agreement.",
+        "rubric": [
+          "Identify dependency on the information",
+          "Separate policy choice from wording",
+          "Define the required content"
+        ],
+        "hint": "Could the report be accepted without that field?",
+        "id": "bcp14-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "BCP 14 requirement levels — primary reference",
+        "url": "https://www.rfc-editor.org/rfc/rfc8174"
+      },
+      {
+        "title": "RFC 2119 — requirement keyword meanings",
+        "url": "https://www.rfc-editor.org/rfc/rfc2119"
+      }
+    ],
+    "related": [
+      "ears",
+      "json-schema",
+      "adr"
+    ],
+    "tasks": [
+      "specify"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "RFC 2119",
+      "RFC 8174",
+      "MUST SHOULD MAY"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply BCP 14 requirement levels to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Declare that the document uses the BCP 14 convention.; Use MUST, SHOULD, and MAY deliberately with their defined meanings.; Supply enough context to understand exceptions and implementation consequences..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "gherkin",
+    "title": "Gherkin",
+    "family": "Requirements & behavior",
+    "type": "Scenario language",
+    "level": "Introductory",
+    "summary": "Express a concrete behavior through starting conditions, an event, and an observable outcome.",
+    "history": [
+      "Gherkin is the scenario language associated with the Cucumber behavior-driven development ecosystem. Its keywords structure examples for people and tooling.",
+      "Executable scenarios require step definitions connected to an implementation. A text file with Given, When, and Then is not automatically a working test."
+    ],
+    "purpose": "Make an interpretation of a requirement concrete enough for people to discuss and, with implementation, exercise.",
+    "principles": [
+      "Use Given for relevant starting context.",
+      "Use When for the event under examination.",
+      "Use Then for an observable outcome; keep incidental interface details out unless they matter."
+    ],
+    "when": [
+      "Agreeing acceptance examples for a feature.",
+      "A prose rule has several plausible interpretations."
+    ],
+    "benefits": [
+      "Concrete cases expose differences between intended and assumed behavior.",
+      "A scenario can bridge product discussion and automated checks when the implementation is connected."
+    ],
+    "limits": [
+      "A passing example does not establish all possible cases.",
+      "Scenarios that only describe clicking buttons may hide the business outcome being tested."
+    ],
+    "example": {
+      "before": "The registration form works even if the user clicks twice.",
+      "after": "Scenario: Repeat an existing confirmed registration\n  Given Maya has a confirmed place in workshop A\n  When Maya submits the same registration again\n  Then Maya receives the existing confirmation\n  And no additional place is reserved",
+      "notes": [
+        "The initial state is explicit.",
+        "The outcome covers both the visible confirmation and the resource effect.",
+        "The scenario leaves identity matching to a separately defined rule."
+      ]
+    },
+    "template": "Feature: [behavior]\n\nScenario: [concrete case]\n  Given [relevant starting state]\n  When [one event]\n  Then [observable result]\n  And [important consequence]\n\nOpen questions:\nImplementation step definitions:\n",
+    "checklist": [
+      "Is the scenario a concrete example?",
+      "Are outcomes observable?",
+      "Are step definitions present before calling it an automated test?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Which Then statement best checks the duplicate-registration rule?",
+        "options": [
+          "Then the page looks good",
+          "Then the browser is open",
+          "Then no additional place is reserved"
+        ],
+        "answer": 2,
+        "explanation": "It checks the domain consequence rather than incidental presentation.",
+        "hint": "What outcome matters if the interface changes?",
+        "id": "gherkin-1"
+      },
+      {
+        "kind": "choice",
+        "question": "A .feature file exists but has no step definitions. What can you claim?",
+        "options": [
+          "The behavior has been written as a scenario",
+          "The implementation passed",
+          "All edge cases are covered"
+        ],
+        "answer": 0,
+        "explanation": "The scenario can support discussion, but execution requires implementation bindings and actual results.",
+        "hint": "Textual specification and executed evidence differ.",
+        "id": "gherkin-2"
+      },
+      {
+        "kind": "open",
+        "question": "Write a failure scenario for a new registration without an email.",
+        "explanation": "Given no registration exists for this participant, when a registration is submitted without an email address, then the service requests an email and does not allocate a place.",
+        "rubric": [
+          "Specify new-registration context",
+          "Name missing input",
+          "Check no place is consumed"
+        ],
+        "hint": "Consider both the message and the resource effect.",
+        "id": "gherkin-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gherkin — primary reference",
+        "url": "https://cucumber.io/docs/gherkin/reference/"
+      }
+    ],
+    "related": [
+      "ears",
+      "example-mapping",
+      "dmn"
+    ],
+    "tasks": [
+      "specify"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "Given When Then",
+      "BDD",
+      "Cucumber"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply Gherkin to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Use Given for relevant starting context.; Use When for the event under examination.; Use Then for an observable outcome; keep incidental interface details out unless they matter..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "example-mapping",
+    "title": "Example Mapping",
+    "family": "Requirements & behavior",
+    "type": "Discovery practice",
+    "level": "Introductory",
+    "summary": "Explore a feature by separating rules, concrete examples, unanswered questions, and scope.",
+    "history": [
+      "Matt Wynne introduced Example Mapping in a 2015 Cucumber article. The practice uses a simple visual arrangement to structure conversations about a story.",
+      "The original colored cards distinguish the story, rules, examples, and questions. A digital equivalent can preserve those roles without requiring particular colors or software."
+    ],
+    "purpose": "Find important decisions before a requirement is mistaken for shared understanding.",
+    "principles": [
+      "Start with one bounded story.",
+      "For each rule, try concrete examples including a boundary or failure case.",
+      "Keep unanswered questions visible instead of silently choosing an outcome."
+    ],
+    "when": [
+      "Refining a feature with product, engineering, and domain participants.",
+      "A short requirement sounds clear until someone proposes an exception."
+    ],
+    "benefits": [
+      "Concrete cases reveal missing decisions early.",
+      "Separating questions from rules avoids presenting guesses as approved policy."
+    ],
+    "limits": [
+      "A well-organized board does not create stakeholder agreement.",
+      "An example set can remain incomplete; deliberately look for conflicting and boundary cases."
+    ],
+    "example": {
+      "before": "Story: let participants cancel workshop registrations. Everyone agrees this sounds simple.",
+      "after": "Rule: canceling a confirmed registration releases one place.\nExample: cancel once → release one place.\nExample: submit the same cancellation again → release no extra place.\nQuestion: does cancellation trigger an offer to the waitlist?\nOut of scope: changing to another workshop.",
+      "notes": [
+        "The repeat request surfaces a hidden resource rule.",
+        "The waitlist action remains unresolved.",
+        "Moving a related feature out of scope prevents accidental implementation."
+      ]
+    },
+    "template": "# Example map\nStory and boundary:\nRule:\nNormal example:\nBoundary example:\nFailure or repeat example:\nUnanswered questions:\nSeparate stories / out of scope:\nDecisions confirmed by:\n",
+    "checklist": [
+      "Are questions visually distinct from rules?",
+      "Is there a repeat or boundary case?",
+      "Who has confirmed the expected outcomes?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "The team does not know whether an expired offer can be renewed. Where should it go?",
+        "options": [
+          "An unanswered question",
+          "An approved rule",
+          "A success claim"
+        ],
+        "answer": 0,
+        "explanation": "The map should preserve uncertainty until someone with authority resolves it.",
+        "hint": "Unknown behavior is not an implicit default.",
+        "id": "example-mapping-1"
+      },
+      {
+        "kind": "choice",
+        "question": "What most directly improves “users can cancel”?",
+        "options": [
+          "A case where cancellation is repeated",
+          "A more impressive feature name",
+          "A longer introduction"
+        ],
+        "answer": 0,
+        "explanation": "A repeat case exposes whether resource effects can occur twice.",
+        "hint": "Try a concrete interaction rather than another adjective.",
+        "id": "example-mapping-2"
+      },
+      {
+        "kind": "open",
+        "question": "Map a workshop waitlist question into one rule, example, and open question.",
+        "explanation": "Rule: a full workshop puts a valid new registration on the waitlist. Example: with zero places, a new valid registration is waitlisted and consumes no place. Question: how long does an offer remain valid after a place opens?",
+        "rubric": [
+          "Separate the rule and case",
+          "Include resource effects",
+          "Keep the unapproved duration open"
+        ],
+        "hint": "Do not invent a timeout to fill the gap.",
+        "id": "example-mapping-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Example Mapping — primary reference",
+        "url": "https://cucumber.io/blog/bdd/example-mapping-introduction/"
+      }
+    ],
+    "related": [
+      "ears",
+      "gherkin",
+      "adr"
+    ],
+    "tasks": [
+      "specify",
+      "decide"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "three amigos",
+      "specification workshop"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply Example Mapping to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Start with one bounded story.; For each rule, try concrete examples including a boundary or failure case.; Keep unanswered questions visible instead of silently choosing an outcome..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "bpmn",
+    "title": "BPMN",
+    "family": "Requirements & behavior",
+    "type": "Standard notation",
+    "level": "Intermediate",
+    "summary": "Describe a business process through activities, events, decisions, and participant boundaries.",
+    "history": [
+      "Business Process Model and Notation developed through business-process modeling work and is maintained by OMG. BPMN 2.0 introduced a standardized basis for richer process interchange and execution semantics.",
+      "The official overview emphasizes a notation understandable to business users while representing process semantics for technical users."
+    ],
+    "purpose": "Make workflow responsibilities and exceptions discussable across people and systems.",
+    "principles": [
+      "Distinguish activities from the events that start or interrupt them.",
+      "Label decision conditions and alternate paths.",
+      "Use participant boundaries consistently; messages between participants differ from sequence flow within a process."
+    ],
+    "when": [
+      "Approval, registration, onboarding, or escalation workflows.",
+      "A handoff or timeout is important and prose leaves ownership unclear."
+    ],
+    "benefits": [
+      "Events and branches can make neglected exceptions visible.",
+      "Participant boundaries help people discuss responsibility."
+    ],
+    "limits": [
+      "A drawn process is not automatically deployed executable automation.",
+      "Using BPMN symbols casually can imply incorrect semantics; a teaching sketch should be labeled as such."
+    ],
+    "example": {
+      "before": "The organizer approves the request and support handles it if needed.",
+      "after": "Participant: attendee submits a cancellation request.\nParticipant: organizer reviews the request.\nDecision: approve or reject under the agreed policy.\nTimer event: deadline passes → escalate for review.\nOutcome: attendee receives the decision.\nThis is a textual process sketch, not a complete BPMN file.",
+      "notes": [
+        "The sketch names responsibility.",
+        "The timer becomes part of the process question.",
+        "The approval policy still needs a decision model or explicit rules."
+      ]
+    },
+    "template": "# Process model\nProcess boundary:\nParticipants:\nStart event:\nActivities and owners:\nGateway conditions:\nMessages between participants:\nTimer / error / cancellation events:\nEnd outcomes:\n",
+    "checklist": [
+      "Are events distinguished from actions?",
+      "Are all consequential branches labeled?",
+      "Are cross-participant handoffs represented as messages?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "What is especially useful to model for “escalate if no response arrives”?",
+        "options": [
+          "A timer event and escalation path",
+          "Only a success-path task list",
+          "A database column name"
+        ],
+        "answer": 0,
+        "explanation": "The condition is time-related and changes process flow.",
+        "hint": "What interrupts or redirects the normal path?",
+        "id": "bpmn-1"
+      },
+      {
+        "kind": "choice",
+        "question": "Does drawing a BPMN process mean it is running in production?",
+        "options": [
+          "Yes",
+          "Only if every shape is labeled",
+          "No; execution and integration are separate work"
+        ],
+        "answer": 2,
+        "explanation": "A process model can support discussion without any execution engine.",
+        "hint": "Description is not deployment.",
+        "id": "bpmn-2"
+      },
+      {
+        "kind": "open",
+        "question": "Add a missing failure path to a workshop approval process.",
+        "explanation": "If the organizer rejects the request, notify the attendee of the rejection and preserve the booking according to the stated cancellation policy. If that policy is unknown, mark the consequence as unresolved.",
+        "rubric": [
+          "Name the rejection branch",
+          "Give an observable outcome",
+          "Keep unknown policy explicit"
+        ],
+        "hint": "Do not assume that rejection cancels the booking.",
+        "id": "bpmn-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "BPMN — primary reference",
+        "url": "https://www.omg.org/bpmn/"
+      }
+    ],
+    "related": [
+      "dmn",
+      "uml",
+      "scxml"
+    ],
+    "tasks": [
+      "describe",
+      "specify"
+    ],
+    "prerequisites": "Understand the workflow participants and the difference between actions and events.",
+    "aliases": [
+      "Business Process Model and Notation",
+      "workflow"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply BPMN to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Distinguish activities from the events that start or interrupt them.; Label decision conditions and alternate paths.; Use participant boundaries consistently; messages between participants differ from sequence flow within a process..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "dmn",
+    "title": "DMN & decision tables",
+    "family": "Requirements & behavior",
+    "type": "Standard notation",
+    "level": "Intermediate",
+    "summary": "Represent how input conditions produce an explicit decision outcome.",
+    "history": [
+      "OMG maintains Decision Model and Notation for business decisions and rules. Its design complements process notations such as BPMN while allowing decision models to stand alone.",
+      "Decision tables are a central representation, but a full DMN model also addresses decision dependencies and expressions. A simple Markdown table is not automatically a conformant DMN artifact."
+    ],
+    "purpose": "Expose gaps, overlaps, and priorities in a repeatable decision.",
+    "principles": [
+      "Define input meanings and possible output values.",
+      "Write conditions and outcomes explicitly.",
+      "Declare what happens when several rows match, using the appropriate hit policy."
+    ],
+    "when": [
+      "Eligibility, routing, classification, or other bounded business rules.",
+      "Several prose exceptions interact and reviewers cannot see which outcome wins."
+    ],
+    "benefits": [
+      "Rows make combinations easier to compare.",
+      "An explicit overlap policy exposes accidental precedence."
+    ],
+    "limits": [
+      "A complete-looking table can consistently execute the wrong policy.",
+      "The table must address missing input and conflicting rows; execution does not create agreement."
+    ],
+    "example": {
+      "before": "Confirm when there is room. Return the old confirmation for duplicates. Ask for email if missing.",
+      "after": "First matching row wins in this teaching table:\n1. Existing confirmation → return existing; allocate 0.\n2. New, email missing → request email; allocate 0.\n3. New, email present, place available → confirm; allocate 1.\n4. New, email present, full → waitlist; allocate 0.",
+      "notes": [
+        "The duplicate row precedes the new-registration rules.",
+        "The email condition is not silently assumed.",
+        "First-match behavior is stated; another policy could reveal an overlap rather than select the first row."
+      ]
+    },
+    "template": "# Decision table\nDecision name:\nInput definitions and allowed values:\nOutput definitions:\nRows: conditions | outcome\nHit policy / overlap behavior:\nMissing-input behavior:\nUncovered cases:\nPolicy owner and confirmation:\n",
+    "checklist": [
+      "Can more than one row match?",
+      "Is overlap behavior explicit?",
+      "Are unknown inputs and missing cases visible?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Two matching rows return different outcomes and no hit policy is stated. What should you do?",
+        "options": [
+          "Pick the visually first row silently",
+          "Report the ambiguity and obtain the intended policy",
+          "Average the outcomes"
+        ],
+        "answer": 1,
+        "explanation": "The table has not defined how to handle the overlap. Choosing silently invents policy.",
+        "hint": "Row order only has meaning when the policy gives it meaning.",
+        "id": "dmn-1"
+      },
+      {
+        "kind": "choice",
+        "question": "What does an executed decision table establish by itself?",
+        "options": [
+          "That the business policy is correct",
+          "That every implementation follows it",
+          "That the supplied model produced an outcome under its semantics"
+        ],
+        "answer": 2,
+        "explanation": "Execution is evidence about the model and inputs, not universal proof of policy or implementation correctness.",
+        "hint": "Separate model behavior from external truth.",
+        "id": "dmn-2"
+      },
+      {
+        "kind": "open",
+        "question": "Why must duplicate handling be explicit in a capacity decision?",
+        "explanation": "A repeated submission should not accidentally allocate a second place. Its outcome differs from a valid new registration, so the table needs a distinct condition or a separate preceding decision.",
+        "rubric": [
+          "Identify repeated versus new input",
+          "Preserve capacity effects",
+          "Make precedence or separation explicit"
+        ],
+        "hint": "Which two requests can look similar but have different effects?",
+        "id": "dmn-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "DMN & decision tables — primary reference",
+        "url": "https://www.omg.org/dmn/"
+      }
+    ],
+    "related": [
+      "bpmn",
+      "ears",
+      "scxml"
+    ],
+    "tasks": [
+      "specify",
+      "decide"
+    ],
+    "prerequisites": "Be able to name the decision inputs, outcomes, and the owner of the policy.",
+    "aliases": [
+      "Decision Model and Notation",
+      "decision table",
+      "hit policy"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply DMN & decision tables to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Define input meanings and possible output values.; Write conditions and outcomes explicitly.; Declare what happens when several rows match, using the appropriate hit policy..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "json-schema",
+    "title": "JSON Schema",
+    "family": "Contracts & knowledge",
+    "type": "Specification",
+    "level": "Intermediate",
+    "summary": "Describe which JSON values have the structure and constraints your application expects.",
+    "history": [
+      "JSON Schema developed as a declarative language for describing and validating JSON documents. The project maintains a family of specification drafts and implementation guidance.",
+      "This entry uses the 2020-12 dialect in its example. Choosing a dialect matters because validator behavior and available keywords depend on it."
+    ],
+    "purpose": "Make machine-consumed output requirements explicit rather than relying on examples or informal prose alone.",
+    "principles": [
+      "Declare the schema dialect.",
+      "Separate required presence from the allowed type and value.",
+      "Check actual instances with a validator that supports the chosen dialect."
+    ],
+    "when": [
+      "An AI answer or API payload must have a predictable structure.",
+      "Several consumers disagree about which fields are required or optional."
+    ],
+    "benefits": [
+      "Schemas can produce actionable structural validation failures.",
+      "Explicit constraints reduce accidental format drift between producers and consumers."
+    ],
+    "limits": [
+      "A structurally valid claim can be false or unsupported.",
+      "Some format checks require explicit validator configuration; field presence alone does not establish semantic meaning."
+    ],
+    "example": {
+      "before": "Return a JSON object with a document ID and whether reading is allowed.",
+      "after": "{\n  \"$schema\": \"https://json-schema.org/draft/2020-12/schema\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"document_id\": {\"type\": \"string\", \"minLength\": 1},\n    \"allowed\": {\"type\": \"boolean\"}\n  },\n  \"required\": [\"document_id\", \"allowed\"],\n  \"additionalProperties\": false\n}",
+      "notes": [
+        "The boolean must be a JSON boolean, not the string \"true\".",
+        "The identifier must be present and nonempty.",
+        "The schema cannot tell whether the permission decision was justified."
+      ]
+    },
+    "template": "# JSON output contract\nDialect:\nPurpose:\nRequired fields:\nProperty types and allowed values:\nUnknown-property policy:\nValid example:\nInvalid examples and expected failures:\nValidator and configuration:\nSemantic checks outside the schema:\n",
+    "checklist": [
+      "Are required fields actually listed as required?",
+      "Does the validator support the dialect?",
+      "Which truth or permission checks remain outside validation?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Which value satisfies a JSON boolean constraint?",
+        "options": [
+          "\"false\"",
+          "0",
+          "false"
+        ],
+        "answer": 2,
+        "explanation": "JSON distinguishes booleans from strings and numbers.",
+        "hint": "Look at the value’s type, not its apparent meaning.",
+        "id": "json-schema-1"
+      },
+      {
+        "kind": "choice",
+        "question": "A permission object validates. What has been established?",
+        "options": [
+          "The access decision is correct",
+          "The user is authorized",
+          "The instance satisfies the checked schema constraints"
+        ],
+        "answer": 2,
+        "explanation": "Structural conformance does not establish the truth or authority of a decision.",
+        "hint": "A schema checks specified constraints.",
+        "id": "json-schema-2"
+      },
+      {
+        "kind": "open",
+        "question": "Add an invalid example for the supplied schema and explain the failure.",
+        "explanation": "{\"document_id\":\"d1\",\"allowed\":\"yes\"} fails because allowed is a string rather than a boolean. A separate example without document_id would fail the required-presence constraint.",
+        "rubric": [
+          "Give a concrete instance",
+          "Identify the exact violated constraint",
+          "Separate structural from semantic errors"
+        ],
+        "hint": "Change only one field to isolate the failure.",
+        "id": "json-schema-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "JSON Schema — primary reference",
+        "url": "https://json-schema.org/overview/what-is-jsonschema"
+      }
+    ],
+    "related": [
+      "openapi",
+      "shacl",
+      "bcp14"
+    ],
+    "tasks": [
+      "specify"
+    ],
+    "prerequisites": "Understand JSON objects, arrays, strings, numbers, and booleans.",
+    "aliases": [
+      "structured output",
+      "JSON validation",
+      "output schema"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply JSON Schema to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Declare the schema dialect.; Separate required presence from the allowed type and value.; Check actual instances with a validator that supports the chosen dialect..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "openapi",
+    "title": "OpenAPI",
+    "family": "Contracts & knowledge",
+    "type": "Specification",
+    "level": "Intermediate",
+    "summary": "Describe an HTTP API’s operations, inputs, responses, and security requirements.",
+    "history": [
+      "The OpenAPI Specification grew from the Swagger ecosystem and is maintained through the OpenAPI Initiative. It provides a language-independent description of HTTP interfaces.",
+      "This entry references OpenAPI 3.1.0, published in 2021, as a specific teaching baseline. It does not claim that this is the newest release."
+    ],
+    "purpose": "Give people and tools a shared interface description without requiring them to infer the API from implementation code.",
+    "principles": [
+      "Describe paths and operations from the consumer’s perspective.",
+      "Specify requests and relevant success and error responses.",
+      "Keep authentication descriptions distinct from actual authorization enforcement."
+    ],
+    "when": [
+      "Designing or reviewing an HTTP interface.",
+      "A payload schema exists but clients cannot tell where to send it or how failures are represented."
+    ],
+    "benefits": [
+      "A shared contract supports documentation, tooling, and implementation review.",
+      "Explicit failure responses expose missing behavior early."
+    ],
+    "limits": [
+      "A specification can disagree with the running service.",
+      "Security declarations describe requirements; they do not install enforcement."
+    ],
+    "example": {
+      "before": "Send a registration object to the service and handle whatever comes back.",
+      "after": "openapi: 3.1.0\ninfo:\n  title: Workshop API\n  version: 1.0.0\npaths:\n  /registrations:\n    post:\n      responses:\n        \"201\":\n          description: New registration created\n        \"400\":\n          description: Registration input is invalid\n\n# Minimal teaching document; request schemas and other outcomes\n# must be added for a real registration contract.",
+      "notes": [
+        "The example names the HTTP operation.",
+        "The response statuses distinguish creation from invalid input.",
+        "The comment explicitly identifies what this minimal document leaves out."
+      ]
+    },
+    "template": "# HTTP API contract\nSpecification version:\nConsumer and purpose:\nPath and HTTP method:\nParameters:\nRequest body and schema:\nSuccess responses:\nError responses:\nAuthentication and authorization expectations:\nCompatibility policy:\nImplementation checks:\n",
+    "checklist": [
+      "Are important failure responses described?",
+      "Do request and response examples match the schemas?",
+      "Has actual behavior been checked separately?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Which question needs OpenAPI beyond a payload schema?",
+        "options": [
+          "Which HTTP operation accepts this payload and what errors can it return?",
+          "Is allowed a boolean?",
+          "Is the claim factually true?"
+        ],
+        "answer": 0,
+        "explanation": "OpenAPI adds operation-level interface information around payload descriptions.",
+        "hint": "Think about the consumer’s whole request.",
+        "id": "openapi-1"
+      },
+      {
+        "kind": "choice",
+        "question": "Does a security declaration in OpenAPI enforce access control?",
+        "options": [
+          "Yes",
+          "No; the server must implement enforcement",
+          "Only if the specification is YAML"
+        ],
+        "answer": 1,
+        "explanation": "A description of a requirement does not perform the check.",
+        "hint": "Separate contract and implementation.",
+        "id": "openapi-2"
+      },
+      {
+        "kind": "open",
+        "question": "What should a registration API describe when the input is missing required information?",
+        "explanation": "Describe the relevant client-error response and its payload, including how the missing information is identified. Agree the status and error semantics instead of assuming all failures return the same success shape.",
+        "rubric": [
+          "Include an error response",
+          "Describe its body",
+          "Avoid inventing unapproved semantics"
+        ],
+        "hint": "What does a client need to recover?",
+        "id": "openapi-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "OpenAPI — primary reference",
+        "url": "https://spec.openapis.org/oas/v3.1.0.html"
+      }
+    ],
+    "related": [
+      "json-schema",
+      "asyncapi",
+      "gherkin"
+    ],
+    "tasks": [
+      "specify",
+      "describe"
+    ],
+    "prerequisites": "Know the basics of HTTP requests, responses, and status codes.",
+    "aliases": [
+      "Swagger",
+      "HTTP API contract"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply OpenAPI to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Describe paths and operations from the consumer’s perspective.; Specify requests and relevant success and error responses.; Keep authentication descriptions distinct from actual authorization enforcement..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "asyncapi",
+    "title": "AsyncAPI",
+    "family": "Contracts & knowledge",
+    "type": "Specification",
+    "level": "Intermediate",
+    "summary": "Describe message-driven interfaces through channels, operations, messages, and protocol details.",
+    "history": [
+      "The AsyncAPI Initiative develops a specification for describing asynchronous and event-driven interfaces. Its document model gives teams a shared description of messaging contracts.",
+      "The linked conceptual documentation explains the roles of channels, operations, and messages. Version-specific syntax should be checked against the edition a tool supports."
+    ],
+    "purpose": "Make messaging interactions explicit where an HTTP request-response description is not enough.",
+    "principles": [
+      "Identify the application perspective and operation direction.",
+      "Describe channels, message payloads, and relevant protocol bindings.",
+      "State delivery and processing assumptions separately when they matter."
+    ],
+    "when": [
+      "Services exchange events or commands through a broker.",
+      "Teams need to agree message names, payloads, and producer/consumer responsibilities."
+    ],
+    "benefits": [
+      "A shared message contract can expose ambiguous ownership.",
+      "Payload and channel descriptions support documentation and compatible tooling."
+    ],
+    "limits": [
+      "A contract does not guarantee delivery, ordering, or exactly-once processing.",
+      "Describing a message does not make every consumer safe under retries or duplicates."
+    ],
+    "example": {
+      "before": "The workshop service tells notifications when someone registers.",
+      "after": "Application: workshop registration service\nOperation: send registration-confirmed\nChannel: workshop.registrations\nMessage: registration ID, workshop ID, participant contact reference\nConsumer expectation: repeated message IDs must not send duplicate confirmations\nThis is a conceptual contract sketch, not versioned AsyncAPI YAML.",
+      "notes": [
+        "Direction is defined from the named application’s perspective.",
+        "The message has an identity useful for duplicate handling.",
+        "The processing requirement still needs implementation evidence."
+      ]
+    },
+    "template": "# Message interface\nAsyncAPI edition:\nApplication and operation direction:\nChannel:\nMessage name and identity:\nPayload schema:\nProtocol binding:\nOrdering, retry, and duplicate assumptions:\nConsumer behavior:\nCompatibility policy:\n",
+    "checklist": [
+      "Whose send/receive perspective is used?",
+      "Are message identities and payloads explicit?",
+      "Are delivery guarantees distinguished from assumptions?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Why state the application perspective?",
+        "options": [
+          "To choose a font",
+          "Because send and receive depend on which application is described",
+          "Because channels always have one reader"
+        ],
+        "answer": 1,
+        "explanation": "The same message may be sent by one application and received by another.",
+        "hint": "Direction is relative to the application.",
+        "id": "asyncapi-1"
+      },
+      {
+        "kind": "choice",
+        "question": "Does a message contract prove that duplicate delivery has no duplicate effect?",
+        "options": [
+          "No; the consumer’s processing must be checked",
+          "Yes",
+          "Only for small payloads"
+        ],
+        "answer": 0,
+        "explanation": "Duplicate-safe processing is behavior beyond describing the message shape.",
+        "hint": "A valid event can be delivered twice.",
+        "id": "asyncapi-2"
+      },
+      {
+        "kind": "open",
+        "question": "What would you add to a notification contract to discuss duplicate delivery?",
+        "explanation": "Give messages a stable identity, state the retry/delivery assumptions, and specify whether the consumer deduplicates effects. Add a repeated-delivery scenario and check the implementation.",
+        "rubric": [
+          "Identify messages",
+          "State processing expectations",
+          "Retain an executable or reviewable repeat case"
+        ],
+        "hint": "What ties two deliveries to one logical event?",
+        "id": "asyncapi-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "AsyncAPI — primary reference",
+        "url": "https://www.asyncapi.com/docs/concepts/asyncapi-document"
+      }
+    ],
+    "related": [
+      "openapi",
+      "json-schema",
+      "gherkin"
+    ],
+    "tasks": [
+      "describe",
+      "specify"
+    ],
+    "prerequisites": "Understand producers, consumers, and message channels.",
+    "aliases": [
+      "event driven",
+      "message contract"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply AsyncAPI to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Identify the application perspective and operation direction.; Describe channels, message payloads, and relevant protocol bindings.; State delivery and processing assumptions separately when they matter..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "skos",
+    "title": "SKOS",
+    "family": "Contracts & knowledge",
+    "type": "W3C vocabulary model",
+    "level": "Intermediate",
+    "summary": "Represent concepts, preferred terms, alternative labels, and their relationships consistently.",
+    "history": [
+      "W3C published the SKOS Recommendation in 2009, alongside a primer for representing knowledge-organization systems on the web.",
+      "SKOS builds on RDF to represent concept schemes such as thesauri and taxonomies. It distinguishes the concept from the words used to label it."
+    ],
+    "purpose": "Keep terminology organized without pretending every vocabulary relationship is a strict logical definition.",
+    "principles": [
+      "Give a concept a stable identifier.",
+      "Distinguish preferred labels from alternative labels.",
+      "Use broader, narrower, and related links according to their intended meanings."
+    ],
+    "when": [
+      "An organization uses different labels for the same concept.",
+      "A topic catalog needs a maintained taxonomy or mappings across vocabularies."
+    ],
+    "benefits": [
+      "Stable concept identities support label changes and multilingual vocabularies.",
+      "Explicit relationships reduce accidental synonym and hierarchy confusion."
+    ],
+    "limits": [
+      "A broader concept is not automatically an object-oriented superclass.",
+      "A taxonomy does not verify the factual truth of documents tagged with its concepts."
+    ],
+    "example": {
+      "before": "Tags: training, tutorial, guide, instruction. Nobody knows which are synonyms or related topics.",
+      "after": "Concept: example:Tutorial\nPreferred label: tutorial (English)\nAlternative label: guided learning exercise (English)\nBroader concept: learning resource\nRelated concept: how-to guide\nScope note: a learning-oriented guided experience, not any page with steps.",
+      "notes": [
+        "The concept has an identity beyond its current label.",
+        "Related does not mean equivalent.",
+        "The scope note reduces ambiguous tagging decisions."
+      ]
+    },
+    "template": "# Vocabulary concept\nStable identifier:\nPreferred label and language:\nAlternative labels:\nDefinition / scope note:\nBroader / narrower concepts:\nRelated concepts:\nMapping to other schemes:\nSource and owner:\n",
+    "checklist": [
+      "Are concepts separated from labels?",
+      "Does a synonym really mean the same thing in this scope?",
+      "Are broader and related links being confused?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "A team renames “participant” to “attendee” without changing the concept. What can remain stable?",
+        "options": [
+          "The concept identifier",
+          "Every old label must be deleted",
+          "All related concepts must be merged"
+        ],
+        "answer": 0,
+        "explanation": "The identity can persist while labels change or alternatives remain searchable.",
+        "hint": "A name is not the same as the concept.",
+        "id": "skos-1"
+      },
+      {
+        "kind": "choice",
+        "question": "Does a broader link necessarily mean software inheritance?",
+        "options": [
+          "Yes",
+          "No; SKOS conceptual hierarchy is not automatically class inheritance",
+          "Only in English"
+        ],
+        "answer": 1,
+        "explanation": "Knowledge-organization relations should not be silently converted into stronger implementation semantics.",
+        "hint": "Check what the relation actually asserts.",
+        "id": "skos-2"
+      },
+      {
+        "kind": "open",
+        "question": "Explain why tutorial and how-to guide should not automatically be alternative labels for one concept.",
+        "explanation": "They can serve different reader needs: learning a skill versus applying existing skill to a task. Model their relationship and scope rather than merging them merely because both contain steps.",
+        "rubric": [
+          "Use meaning rather than similar appearance",
+          "State the distinction",
+          "Choose an appropriate relation"
+        ],
+        "hint": "Could substituting one label change the reader’s expectation?",
+        "id": "skos-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "SKOS — primary reference",
+        "url": "https://www.w3.org/TR/skos-primer/"
+      }
+    ],
+    "related": [
+      "concept-maps",
+      "diataxis",
+      "shacl"
+    ],
+    "tasks": [
+      "understand",
+      "explain",
+      "describe"
+    ],
+    "prerequisites": "Understand identifiers and basic vocabulary relationships; RDF is helpful for implementation.",
+    "aliases": [
+      "Simple Knowledge Organization System",
+      "taxonomy",
+      "controlled vocabulary"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply SKOS to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Give a concept a stable identifier.; Distinguish preferred labels from alternative labels.; Use broader, narrower, and related links according to their intended meanings..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "shacl",
+    "title": "SHACL",
+    "family": "Contracts & knowledge",
+    "type": "W3C constraint language",
+    "level": "Advanced",
+    "summary": "Check RDF graph data against explicit shapes and constraints.",
+    "history": [
+      "W3C published SHACL as a Recommendation in 2017. It defines validation of RDF data graphs against conditions represented in a shapes graph.",
+      "Shapes can also document the graph structures a system expects. They are distinct from the domain facts being checked."
+    ],
+    "purpose": "Make graph-data expectations inspectable and report where actual data violates them.",
+    "principles": [
+      "Identify the target nodes to validate.",
+      "Specify property constraints such as value type and cardinality.",
+      "Review validation results against the correct data and shapes versions."
+    ],
+    "when": [
+      "A knowledge graph must meet explicit structural requirements.",
+      "Vocabulary data is exchanged between systems that expect particular properties."
+    ],
+    "benefits": [
+      "A validation report can locate concrete graph-data violations.",
+      "Separate shapes make expectations easier to review and reuse."
+    ],
+    "limits": [
+      "A conforming graph may contain false statements.",
+      "Validation coverage depends on target selection and the supplied shapes; unvalidated nodes do not become valid by omission."
+    ],
+    "example": {
+      "before": "Every workshop should have a title, but some graph nodes do not.",
+      "after": "@prefix ex: <https://example.org/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nex:WorkshopShape a sh:NodeShape ;\n  sh:targetClass ex:Workshop ;\n  sh:property [\n    sh:path ex:title ;\n    sh:minCount 1 ;\n    sh:datatype xsd:string\n  ] .",
+      "notes": [
+        "The target identifies Workshop nodes.",
+        "The shape requires at least one string title.",
+        "It does not prove the title accurately names a real workshop."
+      ]
+    },
+    "template": "# Graph validation brief\nData graph and version:\nShapes graph and version:\nTarget nodes:\nRequired properties:\nValue and cardinality constraints:\nSeverity and expected report:\nKnown limits outside validation:\n",
+    "checklist": [
+      "Are the intended nodes targeted?",
+      "Are data and shapes versions recorded?",
+      "Are structural findings kept separate from truth claims?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "A shape has no target that selects the intended workshop nodes. What can go wrong?",
+        "options": [
+          "Every node becomes correct",
+          "Those nodes may never be checked",
+          "The vocabulary is automatically repaired"
+        ],
+        "answer": 1,
+        "explanation": "Coverage depends on which nodes receive validation. Missing targets can make a report misleadingly quiet.",
+        "hint": "Ask what was actually examined.",
+        "id": "shacl-1"
+      },
+      {
+        "kind": "choice",
+        "question": "A graph passes the supplied shapes. What can you conclude?",
+        "options": [
+          "The targeted data satisfied the checked constraints",
+          "Every fact is true",
+          "The source is trustworthy"
+        ],
+        "answer": 0,
+        "explanation": "Constraint validation does not independently establish truth or provenance.",
+        "hint": "Conformance is relative to constraints and targets.",
+        "id": "shacl-2"
+      },
+      {
+        "kind": "open",
+        "question": "What else should accompany a “graph validated” claim?",
+        "explanation": "Record the data graph, shapes graph, their versions, the target scope, validator, and actual report. Explain which semantic or factual questions were not checked.",
+        "rubric": [
+          "Identify inputs",
+          "State coverage",
+          "Preserve the actual validation evidence"
+        ],
+        "hint": "Could someone reproduce exactly what was checked?",
+        "id": "shacl-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "SHACL — primary reference",
+        "url": "https://www.w3.org/TR/shacl/"
+      }
+    ],
+    "related": [
+      "skos",
+      "json-schema",
+      "prov"
+    ],
+    "tasks": [
+      "specify"
+    ],
+    "prerequisites": "Familiarity with RDF triples, identifiers, and typed literals is useful.",
+    "aliases": [
+      "Shapes Constraint Language",
+      "RDF validation"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply SHACL to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Identify the target nodes to validate.; Specify property constraints such as value type and cardinality.; Review validation results against the correct data and shapes versions..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "prov",
+    "title": "W3C PROV",
+    "family": "Contracts & knowledge",
+    "type": "Provenance model",
+    "level": "Intermediate",
+    "summary": "Describe the entities, activities, and agents involved in producing an artifact.",
+    "history": [
+      "The W3C PROV family was published in 2013 to support interoperable provenance information. It includes a conceptual model, ontology, and serializations.",
+      "The overview distinguishes information about a thing’s production from an automatic verdict about its trustworthiness."
+    ],
+    "purpose": "Let someone inspect how a result relates to inputs, transformations, and responsible actors.",
+    "principles": [
+      "Identify the artifact and its source entities.",
+      "Record the activity that used inputs and generated an output.",
+      "Identify responsible agents and preserve version or revision references."
+    ],
+    "when": [
+      "A report combines data from several sources or transformations.",
+      "An AI-generated result needs a traceable connection to supplied evidence."
+    ],
+    "benefits": [
+      "Provenance helps a reviewer reconstruct dependencies and origin.",
+      "Versioned inputs can reveal when an artifact may need revisiting."
+    ],
+    "limits": [
+      "A provenance record can be incomplete or false.",
+      "Knowing where a claim came from does not prove the source or transformation was correct."
+    ],
+    "example": {
+      "before": "“This summary is based on the latest documents.”",
+      "after": "Entity: workshop-policy revision 7\nActivity: summarize-policy run 12\nAgent: reviewed authoring process\nActivity used: workshop-policy revision 7\nActivity generated: participant-summary revision 2\nOpen check: confirm that cancellation exceptions survived the summary.",
+      "notes": [
+        "The source has a revision rather than an ambiguous freshness claim.",
+        "The transformation and output are identified.",
+        "The unresolved meaning-preservation check remains separate from lineage."
+      ]
+    },
+    "template": "# Provenance record\nOutput entity and revision:\nInput entities and revisions:\nActivity or transformation:\nResponsible agent:\nObserved time, if actually recorded:\nEvidence locations:\nReview performed:\nUnverified claims:\n",
+    "checklist": [
+      "Can the exact inputs be found?",
+      "Is observed provenance distinguished from inferred lineage?",
+      "What remains unverified despite the record?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Which provenance statement is more inspectable?",
+        "options": [
+          "Based on the latest policy",
+          "Used policy revision 7 to generate summary revision 2",
+          "Created with an advanced model"
+        ],
+        "answer": 1,
+        "explanation": "A specific revision supports tracing and reproduction. “Latest” can change meaning immediately.",
+        "hint": "Can another person identify the same input?",
+        "id": "prov-1"
+      },
+      {
+        "kind": "choice",
+        "question": "Does an accurate lineage record prove the summary preserved every exception?",
+        "options": [
+          "Yes",
+          "Only if the source has a date",
+          "No; preservation needs separate checking"
+        ],
+        "answer": 2,
+        "explanation": "Lineage and semantic adequacy are separate properties.",
+        "hint": "An identifiable transformation can still lose information.",
+        "id": "prov-2"
+      },
+      {
+        "kind": "open",
+        "question": "An input changes after a report was generated. What should the provenance let a reader discover?",
+        "explanation": "Which revision the report actually used, which parts depend on that input, and whether any review against the new revision has occurred. A source change is a reason to inspect freshness, not proof that every statement became false.",
+        "rubric": [
+          "Retain the old input revision",
+          "Expose dependency",
+          "Avoid equating change with certain invalidity"
+        ],
+        "hint": "What would a reviewer need before reusing the report?",
+        "id": "prov-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "W3C PROV — primary reference",
+        "url": "https://www.w3.org/TR/prov-overview/"
+      }
+    ],
+    "related": [
+      "adr",
+      "shacl",
+      "json-schema"
+    ],
+    "tasks": [
+      "describe",
+      "decide"
+    ],
+    "prerequisites": "No specialist knowledge is required.",
+    "aliases": [
+      "provenance",
+      "lineage",
+      "PROV-O",
+      "PROV-DM"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply W3C PROV to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Identify the artifact and its source entities.; Record the activity that used inputs and generated an output.; Identify responsible agents and preserve version or revision references..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "scxml",
+    "title": "Statecharts & SCXML",
+    "family": "Precise behavioral models",
+    "type": "Standard notation",
+    "level": "Intermediate",
+    "summary": "Describe which events can change a system’s state, including states where an action is no longer valid.",
+    "history": [
+      "David Harel introduced statecharts in 1987 to describe complex reactive behavior. W3C’s SCXML Recommendation, published in 2015, provides an XML-based state-machine execution model.",
+      "Statecharts support richer structures than a simple flat transition table. This entry begins with a small flat lifecycle so the meaning of a transition stays visible."
+    ],
+    "purpose": "Make lifecycle behavior explicit when the same event can have different consequences in different states.",
+    "principles": [
+      "Name states according to what is true in them.",
+      "Specify event, optional guard, target, and relevant effects for each transition.",
+      "Consider absent transitions and terminal states deliberately."
+    ],
+    "when": [
+      "Bookings, approvals, offers, connection lifecycles, and interactive workflows.",
+      "An expired or canceled object receives another event."
+    ],
+    "benefits": [
+      "State makes otherwise hidden preconditions visible.",
+      "A transition table can reveal actions that have no defined valid path."
+    ],
+    "limits": [
+      "A state diagram alone does not implement durable processing, timers, or concurrency control.",
+      "The correctness of a lifecycle still depends on agreed policy and implementation."
+    ],
+    "example": {
+      "before": "A waitlisted participant can accept an offer whenever they click the link.",
+      "after": "<scxml xmlns=\"http://www.w3.org/2005/07/scxml\" version=\"1.0\" initial=\"waitlisted\">\n  <state id=\"waitlisted\">\n    <transition event=\"offer\" target=\"offered\"/>\n  </state>\n  <state id=\"offered\">\n    <transition event=\"accept\" target=\"confirmed\"/>\n    <transition event=\"expire\" target=\"expired\"/>\n  </state>\n  <final id=\"confirmed\"/>\n  <final id=\"expired\"/>\n</scxml>",
+      "notes": [
+        "Accept has a transition only in the offered state.",
+        "The expire event must be supplied; this example does not schedule a timer.",
+        "This simplified model ends at confirmed or expired and omits later cancellation."
+      ]
+    },
+    "template": "# State model\nEntity and identity:\nStates and what each means:\nInitial state:\nEvent | source state | guard | effect | target state:\nEvents with no transition:\nTerminal states:\nTimer and persistence responsibilities:\n",
+    "checklist": [
+      "Is each event evaluated in an explicit state?",
+      "Are expiry and cancellation considered?",
+      "Which mechanisms exist outside the model?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "In the example, what happens after the model reaches expired?",
+        "options": [
+          "There is no later accept transition in this terminal model",
+          "An accept event transitions to confirmed",
+          "The timer is automatically extended"
+        ],
+        "answer": 0,
+        "explanation": "Expired is a final state in the supplied model. It does not contain an accept transition.",
+        "hint": "Read the transitions rather than inferring a policy.",
+        "id": "scxml-1"
+      },
+      {
+        "kind": "choice",
+        "question": "Does an expire transition itself schedule a real timeout?",
+        "options": [
+          "Yes",
+          "Only if the state is named expired",
+          "No; an event source or timer mechanism must supply the event"
+        ],
+        "answer": 2,
+        "explanation": "A transition responds to an event. The surrounding system must arrange for that event to occur.",
+        "hint": "Receiving an event and scheduling it differ.",
+        "id": "scxml-2"
+      },
+      {
+        "kind": "open",
+        "question": "What would you need to decide before adding cancellation after confirmation?",
+        "explanation": "Decide who may cancel, under what conditions, the target state, and whether a place is released. Then extend the lifecycle and test repeat cancellation. The current final state intentionally does not define those rules.",
+        "rubric": [
+          "Identify missing policy",
+          "Specify state and effects",
+          "Consider duplicate events"
+        ],
+        "hint": "Do not add an arrow without its consequence.",
+        "id": "scxml-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Statecharts & SCXML — primary reference",
+        "url": "https://www.w3.org/TR/scxml/"
+      },
+      {
+        "title": "Harel, 1987 — Statecharts: A visual formalism for complex systems",
+        "url": "https://doi.org/10.1016/0167-6423(87)90035-9"
+      }
+    ],
+    "related": [
+      "uml",
+      "dmn",
+      "bpmn"
+    ],
+    "tasks": [
+      "describe",
+      "specify"
+    ],
+    "prerequisites": "Understand states, events, and conditions. XML helps when reading the executable notation.",
+    "aliases": [
+      "statecharts",
+      "State Chart XML",
+      "finite state machine"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply Statecharts & SCXML to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Name states according to what is true in them.; Specify event, optional guard, target, and relevant effects for each transition.; Consider absent transitions and terminal states deliberately..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "tla-plus",
+    "title": "TLA+",
+    "family": "Precise behavioral models",
+    "type": "Formal specification language",
+    "level": "Advanced",
+    "summary": "Model possible system behaviors and state the properties those behaviors should satisfy.",
+    "history": [
+      "Leslie Lamport created TLA+ as a mathematical language for specifying systems, especially concurrent and distributed ones. Its foundations use states, actions, and temporal logic.",
+      "The TLA+ tool ecosystem includes the TLC model checker and TLAPS proof system. Writing a model, exploring a bounded configuration, and proving a theorem are different activities."
+    ],
+    "purpose": "Inspect design-level behavior that can be difficult to see in individual code paths, particularly interleavings and state changes.",
+    "principles": [
+      "Define the relevant state and initial condition.",
+      "Describe allowed next-state actions.",
+      "State safety and liveness properties with the assumptions needed to assess them."
+    ],
+    "when": [
+      "Several actors or retries can interact in unexpected orders.",
+      "A design needs a precise model before implementation or a counterexample to a proposed invariant."
+    ],
+    "benefits": [
+      "A model can expose a trace that violates an intended property.",
+      "Explicit assumptions make the scope of a check discussable."
+    ],
+    "limits": [
+      "A model can abstract away the bug you care about.",
+      "A bounded TLC run is not a proof about every deployment, and this website does not run TLC."
+    ],
+    "example": {
+      "before": "Two workers each see one available place and both reserve it. Each worker’s local code looks reasonable.",
+      "after": "Conceptual trace:\nInitial: capacity = 1, reserved = 0\nWorker A checks: reserved < capacity\nWorker B checks: reserved < capacity\nWorker A reserves a place\nWorker B reserves a place\nResult: reserved = 2\nIntended invariant: reserved <= capacity\n\nModel the check and update as separate actions if the implementation permits that interleaving.",
+      "notes": [
+        "The trace illustrates a safety failure, not an actual model-checker result.",
+        "Combining check and update into one modeled action could hide the race.",
+        "A real specification needs an explicit state model and a checked configuration."
+      ]
+    },
+    "template": "# Behavioral specification brief\nState variables:\nInitial condition:\nAllowed actions:\nConcurrency and failure assumptions:\nSafety invariants:\nLiveness requirements and fairness assumptions:\nModel-checking bounds or proof obligations:\nObserved result and counterexample trace:\nAbstractions not covered:\n",
+    "checklist": [
+      "Does the model retain relevant interleavings?",
+      "Are checking bounds and assumptions recorded?",
+      "Is a tool result distinguished from a handwritten trace?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "Which property is a safety invariant for workshop capacity?",
+        "options": [
+          "Every participant eventually reads an email",
+          "The interface is attractive",
+          "No reachable state has more reservations than capacity"
+        ],
+        "answer": 2,
+        "explanation": "A safety property rules out a bad state or behavior. Eventual progress is a different kind of property.",
+        "hint": "Think “the bad thing never happens.”",
+        "id": "tla-plus-1"
+      },
+      {
+        "kind": "choice",
+        "question": "A model makes check-and-reserve atomic, but the implementation separates them. What is the risk?",
+        "options": [
+          "The model may hide a real race",
+          "The model automatically fixes the code",
+          "No risk if the variables have good names"
+        ],
+        "answer": 0,
+        "explanation": "The abstraction removes an interleaving that the implementation permits.",
+        "hint": "Check which behaviors the model excludes.",
+        "id": "tla-plus-2"
+      },
+      {
+        "kind": "open",
+        "question": "What evidence should accompany a claim that an invariant passed TLC?",
+        "explanation": "Record the exact specification, configuration and bounds, tool version, command, and actual result. Explain the modeled assumptions and omitted behavior. Do not describe a handwritten trace as a TLC run.",
+        "rubric": [
+          "Identify the checked artifacts",
+          "State bounds and assumptions",
+          "Retain actual tool evidence"
+        ],
+        "hint": "What would another reviewer need to repeat the check?",
+        "id": "tla-plus-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "TLA+ — primary reference",
+        "url": "https://lamport.azurewebsites.net/tla/tla.html"
+      }
+    ],
+    "related": [
+      "alloy",
+      "scxml",
+      "prov"
+    ],
+    "tasks": [
+      "specify",
+      "decide"
+    ],
+    "prerequisites": "Comfort with sets, logic, state transitions, and concurrent behavior is useful.",
+    "aliases": [
+      "TLA",
+      "TLC",
+      "temporal logic",
+      "model checking"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply TLA+ to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Define the relevant state and initial condition.; Describe allowed next-state actions.; State safety and liveness properties with the assumptions needed to assess them..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  },
+  {
+    "slug": "alloy",
+    "title": "Alloy",
+    "family": "Precise behavioral models",
+    "type": "Formal modeling language",
+    "level": "Advanced",
+    "summary": "Explore structures and counterexamples described by relational constraints.",
+    "history": [
+      "Daniel Jackson and collaborators developed Alloy in MIT’s Software Design Group. Its language draws on relational logic and related formal-modeling traditions.",
+      "The Alloy Analyzer searches for structures satisfying a model and counterexamples to assertions within a configured scope. The current language also supports temporal modeling; this entry uses a small structural example."
+    ],
+    "purpose": "Test whether an intended property actually follows from a set of modeled relationships and constraints.",
+    "principles": [
+      "Define entities and relations precisely.",
+      "Separate facts that constrain every instance from assertions you want to check.",
+      "State the analysis scope and inspect any counterexample."
+    ],
+    "when": [
+      "A data or access model has interacting relationships.",
+      "A claim about uniqueness, ownership, or reachability needs a concrete counterexample search."
+    ],
+    "benefits": [
+      "Small generated structures can make a design flaw tangible.",
+      "An assertion separates a desired property from rules that actually imply it."
+    ],
+    "limits": [
+      "A bounded search without a counterexample is not an unrestricted proof.",
+      "Putting the desired outcome into a fact can make an assertion pass without testing the intended design."
+    ],
+    "example": {
+      "before": "Each registration has one participant and one workshop, so duplicate registrations must be impossible.",
+      "after": "sig Participant {}\nsig Workshop {}\nsig Registration {\n  participant: one Participant,\n  workshop: one Workshop\n}\nassert NoDuplicatePair {\n  all disj a, b: Registration |\n    a.participant != b.participant or a.workshop != b.workshop\n}\ncheck NoDuplicatePair for 3",
+      "notes": [
+        "Exactly one participant per registration does not imply one registration per participant/workshop pair.",
+        "The assertion is a property to investigate, not an added fact.",
+        "This source example has not been executed by this website; run it in the Analyzer to inspect its result."
+      ]
+    },
+    "template": "# Relational model\nEntities and relations:\nFacts / required constraints:\nAssertion to investigate:\nScope and time bounds if applicable:\nExpected interesting instances:\nAnalyzer version and actual result:\nCounterexample interpretation:\nImplementation assumptions:\n",
+    "checklist": [
+      "Is the property tested as an assertion rather than assumed as a fact?",
+      "Is the search scope explicit?",
+      "Does the model include the relationship that can violate the property?"
+    ],
+    "drills": [
+      {
+        "kind": "choice",
+        "question": "What does “each registration has one participant” fail to establish?",
+        "options": [
+          "Uniqueness of the participant/workshop pair across registrations",
+          "That any participant exists",
+          "That the relation is named"
+        ],
+        "answer": 0,
+        "explanation": "Two distinct registrations can still refer to the same participant and workshop.",
+        "hint": "Distinguish cardinality within a record from uniqueness across records.",
+        "id": "alloy-1"
+      },
+      {
+        "kind": "choice",
+        "question": "Why not simply add NoDuplicatePair as a fact before checking it?",
+        "options": [
+          "It would assume the property being investigated",
+          "Facts cannot constrain a model",
+          "Assertions are always proofs"
+        ],
+        "answer": 0,
+        "explanation": "A fact restricts possible models. Assuming the desired conclusion can remove the counterexamples you intended to discover.",
+        "hint": "Separate assumptions from claims.",
+        "id": "alloy-2"
+      },
+      {
+        "kind": "open",
+        "question": "Explain what a counterexample with two registrations for one pair would teach you.",
+        "explanation": "The existing constraints allow duplicates even though the assertion forbids them. Add or redesign the intended uniqueness constraint, then check whether the implementation enforces it. The counterexample concerns the model, not automatically the deployed database.",
+        "rubric": [
+          "Interpret the violated assertion",
+          "Identify the missing constraint",
+          "Separate model and implementation"
+        ],
+        "hint": "What exactly does the structure demonstrate?",
+        "id": "alloy-3"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Alloy — primary reference",
+        "url": "https://alloytools.org/about.html"
+      }
+    ],
+    "related": [
+      "tla-plus",
+      "erd",
+      "dmn"
+    ],
+    "tasks": [
+      "specify",
+      "decide"
+    ],
+    "prerequisites": "Comfort with sets, relations, and logical constraints helps.",
+    "aliases": [
+      "Alloy Analyzer",
+      "relational modeling",
+      "counterexample"
+    ],
+    "reviewed": "2026-10-24",
+    "prompt": "Help me apply Alloy to the material below.\nReader and existing knowledge: [describe]\nTask and desired outcome: [describe]\nUse these principles: Define entities and relations precisely.; Separate facts that constrain every instance from assertions you want to check.; State the analysis scope and inspect any counterexample..\nPreserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.\nSeparate supplied facts from assumptions. Ask for missing information instead of inventing it.\nExplain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.\nMaterial: [paste only information you are permitted to share]"
+  }
+]

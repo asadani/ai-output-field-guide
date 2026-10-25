@@ -1,0 +1,14 @@
+{
+  "profile": "product-admin",
+  "sourceRoots": ["assets", "scripts"],
+  "locale": "en",
+  "canonicalMap": "UX-CONTRACT.md",
+  "requiredCapabilities": ["Select/Listbox", "Form", "Scrollbar", "Toast"],
+  "ownership": { "Select/Listbox": "native" },
+  "requiredCommands": ["content", "unit", "build"],
+  "commands": {
+    "content": "npm run check",
+    "unit": "npm test",
+    "build": "npm run build"
+  }
+}

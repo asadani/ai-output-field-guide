@@ -1,0 +1,8 @@
+Help me apply Plain language to the material below.
+Reader and existing knowledge: [describe]
+Task and desired outcome: [describe]
+Use these principles: Identify the reader and the question they need answered.; Put necessary information where the reader expects to find it.; Use familiar wording while explaining indispensable technical terms..
+Preserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.
+Separate supplied facts from assumptions. Ask for missing information instead of inventing it.
+Explain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.
+Material: [paste only information you are permitted to share]

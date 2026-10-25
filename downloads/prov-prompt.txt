@@ -1,0 +1,8 @@
+Help me apply W3C PROV to the material below.
+Reader and existing knowledge: [describe]
+Task and desired outcome: [describe]
+Use these principles: Identify the artifact and its source entities.; Record the activity that used inputs and generated an output.; Identify responsible agents and preserve version or revision references..
+Preserve source facts, identifiers, quantities, conditions, exceptions, and uncertainty.
+Separate supplied facts from assumptions. Ask for missing information instead of inventing it.
+Explain your representation choices and provide a review checklist. Do not claim formal compliance or correctness from formatting alone.
+Material: [paste only information you are permitted to share]

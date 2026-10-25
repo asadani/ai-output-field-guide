@@ -1,0 +1,13 @@
+{
+  "name": "ai-output-field-guide",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test test/*.test.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "engines": { "node": ">=22" }
+}
