@@ -39,6 +39,8 @@ mirrors accepted light values. background→--bg, surface→--surface, text→--
 muted→--muted, primary→--accent, border→--border. Dark values are defined once in
 [data-theme=dark]; shared components consume those variables. Primary terracotta
 is darkened from the parent site for readable small links and white button text.
+Control boundaries use --control-border (#8B8277 light, #8C8172 dark) so inputs
+and buttons remain identifiable against their surfaces.
 Blue means a representation or selected option, green means a checked answer,
 and red means a correction. Each has a textual equivalent.
 

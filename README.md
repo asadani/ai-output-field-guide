@@ -23,6 +23,8 @@ npm run build
 npm run check
 npm test
 npm run serve
+# Optional structural accessibility checks (Python standard library):
+python scripts/accessibility.py
 ```
 
 Open http://127.0.0.1:4173/ai-output-field-guide/. The development server enforces

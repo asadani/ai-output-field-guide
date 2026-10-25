@@ -51,3 +51,22 @@ Formal-method examples and source fragments are labeled as educational; no model
 checker or general semantic validator runs on the website.
 
 See the release section below for deployed verification once publication completes.
+
+## Deployed verification — 25 October 2026
+
+- Public repository created: https://github.com/asadani/ai-output-field-guide.
+- GitHub Pages reported `built` for initial revision `7f67c95`; HTTPS enforcement
+  was confirmed. The live home, explorer, C4 deep link, and template-copy feedback
+  were verified in Chrome without console errors in that flow.
+- Tech-site listing published in `ef444fc`; Pages reported `built`, and the live
+  catalog contained the guide link.
+- Main-site persistent link published in `90d6270`; Pages reported `built`, and
+  Chrome verified its destination and its separation from the latest-posts feed.
+- The main-site count helper's direct network fetch was unavailable in the CLI.
+  It was run unchanged with a local catalog adapter using the verified tech-site
+  content, updating the fallback to 48 entries. Live browser verification checks
+  the real deployed feed separately.
+- Added a standard-library structural accessibility check on all 53 HTML pages
+  including the 404: labels, ARIA targets, diagram naming, and form validation
+  ownership. Seven text/background pairs exceed 4.5:1 in both themes. This remains
+  a limited structural/palette check, not an accessibility certification.
