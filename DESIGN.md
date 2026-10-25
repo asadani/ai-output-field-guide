@@ -48,7 +48,11 @@ and red means a correction. Each has a textual equivalent.
 
 Locally bundled Newsreader headings, Inter prose, and JetBrains Mono labels/code.
 System fallbacks work if fonts fail. Body measure 68ch, 18px with 1.7 line height;
-labels 12–14px. No text that matters is embedded only in a diagram.
+labels 12–14px. Display headings use regular weight, capped at 64px (60px in
+the split home hero) and 40px on mobile. Card headings use 20px/1.35 semibold
+Inter, summaries 16px/1.65, and category/level labels 13px Inter. Reserve mono
+for short utility labels and code; the home example uses 14px code. No text that
+matters is embedded only in a diagram.
 
 ## Layout
 
@@ -57,6 +61,9 @@ task selection. Desktop entry pages use a quiet sticky contents rail alongside
 one reading column; examples can use the full column. At 760px the rail becomes
 an ordinary details disclosure. Cards form two columns above 760px, one below.
 The page scrolls naturally. Tables/code alone may scroll horizontally.
+Task cards have complete borders and 20–24px padding, with compact serif titles
+and 15px descriptions. All card actions align at the bottom of their grid row;
+content remains natural height without clipping or fixed card heights.
 
 ## Elevation & Depth
 

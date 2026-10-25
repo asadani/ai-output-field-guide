@@ -67,7 +67,7 @@ export function approachPage(a) {
   return shell(a.title, a.summary, `approaches/${a.slug}/`, `<div class="article-layout">${contents(entrySections)}<article class="reading">${content}</article></div>`, { current: 'explore/', crumb: [['explore/', 'Explore'], [`approaches/${a.slug}/`, a.title]], learning: true });
 }
 
-function taskLinks() { return `<div class="task-grid">${journeys.tasks.map(t => `<a class="task-link" href="${href(`apply/${t.slug}/`)}"><strong>${esc(t.title)} <span aria-hidden="true" style="display:inline">↗</span></strong><span>${esc(t.summary)}</span></a>`).join('')}</div>`; }
+function taskLinks() { return `<div class="task-grid">${journeys.tasks.map(t => `<a class="task-link" href="${href(`apply/${t.slug}/`)}"><strong>${esc(t.title)} <span class="task-arrow" aria-hidden="true">↗</span></strong><span>${esc(t.summary)}</span></a>`).join('')}</div>`; }
 function hero(label, title, deck) { return `<div class="hero"><p class="eyebrow">${esc(label)}</p><h1>${esc(title)}</h1><p class="deck">${esc(deck)}</p></div>`; }
 export function home() {
   const demo = journeys.cases[0];

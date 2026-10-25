@@ -70,3 +70,22 @@ See the release section below for deployed verification once publication complet
   including the 404: labels, ARIA targets, diagram naming, and form validation
   ownership. Seven text/background pairs exceed 4.5:1 in both themes. This remains
   a limited structural/palette check, not an accessibility certification.
+
+
+## 2026-10-25 — card and typography correction
+
+Fixed task links that had white surfaces with no horizontal inset, oversized
+line spacing and unbalanced wrapping. Task cards now share complete borders,
+20–24px padding and 24–25px regular serif titles. Shared cards use 16px prose,
+13px sans-serif category/level labels, and actions aligned at the bottom of each
+row without fixed heights. Display headings use regular weight and a smaller
+maximum size; the home case example has larger prose and code. Mobile view
+buttons fit one row, the case link stays together, and search gets a full row.
+
+Chrome visual checks: home at 1440/1280 desktop, 390px mobile and 320px reflow;
+Explore filtered to C4; Learn case cards; C4 detail; light/dark themes. No
+horizontal document overflow at 320px; no browser console errors on the checked
+detail page. Build, content/link checks, all 13 tests, structural accessibility
+checks and strict premium audit passed. DESIGN.md lint has zero errors and the
+three existing runtime-token advisory warnings. Existing broader verification
+limits above still apply.
