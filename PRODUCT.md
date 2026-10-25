@@ -1,5 +1,7 @@
 # AI Output Field Guide
 
+Approved positioning (2026-10-25): An interactive field guide to structuring knowledge that people can understand and AI agents can use.
+
 Anuj approved the implementation plan on 2026-10-24. This is a free, static,
 AI-focused field guide that also works for people doing the work themselves.
 Visitors explore approaches, drill into their principles, and apply them through

@@ -1,5 +1,7 @@
 # AI Output Field Guide
 
+An interactive field guide to structuring knowledge that people can understand and AI agents can use.
+
 **Explore approaches. Understand their history. Practise the judgment. Apply a template.**
 
 Live: https://tech.anujsadani.in/ai-output-field-guide/
